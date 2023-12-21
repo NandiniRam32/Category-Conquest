@@ -28,7 +28,7 @@ import bunny from './components/bunny.jpg';
 };*/
 
 const App = () => {
-  const [currentPage, setCurrentPage] = useState('characters');
+  const [currentPage, setCurrentPage] = useState('main');
   const [category, setCategory] = useState('science');
   const [level, setCurrentLevel] = useState('easy');
   const [teams, setCurrentTeams] = useState(5);
