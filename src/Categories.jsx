@@ -1,7 +1,7 @@
 import React from "react";
 import "./components/TeamSelection.css";
 
-export const Categories = ({setCategory, setCurrentPage, clickedCategories, setClickedCategories}) => {
+export const Categories = ({setCategory, setCurrentPage, clickedCategories, setClickedCategories, setCurTeam}) => {
     const handleSetCategory = (selectedCategory) => {
         setCategory(selectedCategory);
         setClickedCategories((prevClickedCategories) => new Set([...prevClickedCategories, selectedCategory]));
@@ -14,7 +14,7 @@ export const Categories = ({setCategory, setCurrentPage, clickedCategories, setC
 
     const handleCategoryDisappear = (selectedCategory) => {
         return clickedCategories.has(selectedCategory);
-    };  
+    };
 
     return (
         <div className="teamsContainer">
@@ -28,7 +28,7 @@ export const Categories = ({setCategory, setCurrentPage, clickedCategories, setC
                     <text style={{background: "#28fc81", marginRight: "6vw"}} className={`teamsChoice1 ${handleCategoryDisappear("history") 
                     ? 'hidden' : ''}`} onClick={() => handleSetCategory("history")}><b>History</b></text>
                 </div>
-                <div style={{marginTop: "2vh", marginLeft: "8vw", marginTop: "10vh"}}>
+                <div style={{marginLeft: "8vw", marginTop: "10vh"}}>
                     <text style={{background: "#c66bff", marginRight: "6vw"}} className={`teamsChoice1 ${handleCategoryDisappear("technology") 
                     ? 'hidden' : ''}`} onClick={() => handleSetCategory("technology")}><b>Technology</b></text>
                     <text style={{background: "#44d8fc", marginRight: "6vw"}} className={`teamsChoice1 ${handleCategoryDisappear("art") 
@@ -44,7 +44,7 @@ export const Categories = ({setCategory, setCurrentPage, clickedCategories, setC
                     <text style={{background: "#ff6bee", marginRight: "6vw"}} className={`teamsChoice1 ${handleCategoryDisappear("literature") 
                     ? 'hidden' : ''}`} onClick={() => handleSetCategory("literature")}><b>Literature</b></text>
                 </div>
-                <div style={{marginTop: "2vh", marginLeft: "8vw", marginTop: "10vh"}}>
+                <div style={{marginLeft: "8vw", marginTop: "10vh"}}>
                     <text style={{background: "#44d8fc", marginRight: "6vw"}} className={`teamsChoice1 ${handleCategoryDisappear("movies") 
                     ? 'hidden' : ''}`} onClick={() => handleSetCategory("movies")}><b>Movies & TV</b></text>
                     <text style={{background: "#c66bff", marginRight: "6vw"}} className={`teamsChoice1 ${handleCategoryDisappear("music") 
@@ -53,7 +53,7 @@ export const Categories = ({setCategory, setCurrentPage, clickedCategories, setC
                     ? 'hidden' : ''}`} onClick={() => handleSetCategory("general")}><b>General</b></text>
                 </div>
                 <div style={{marginTop: "8vh", paddingLeft: "10vh", paddingRight: "10vh"}}>
-                    <div style={{background: "#44d8fc", fontSize: "3vw", color: "black"}} onClick={() => handleSetPage("main")}><b>Main Menu</b></div>
+                    <div style={{background: "#44d8fc", fontSize: "3vw", color: "black"}} onClick={() => { handleSetPage("main"); setCurTeam(1); }}><b>Main Menu</b></div>
                 </div>
             </div>
         </div>

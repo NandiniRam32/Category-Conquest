@@ -1,7 +1,7 @@
 import React from "react";
 import "./components/TeamSelection.css";
 
-export const Question = ({setCurrentPage, setPoints, level, category, currentTeam, points, setStatus}) => {
+export const Question = ({setCurrentPage, setPoints, level, category, currentTeam, points, setStatus, setCurTeam}) => {
     const handleSetPage = (selectedPage) => {
         setCurrentPage(selectedPage);
     };
@@ -12,7 +12,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
 
     const questions = [
         {
-          id: 1,
           category: 'Geography',
           level: "easy",
           text: 'What is the capital of France?',
@@ -20,7 +19,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
           correctAnswer: 'Paris',
         },
         {
-            id: 2,
             category: 'Science',
             level: "easy",
             text: 'What is the chemical symbol for water?',
@@ -28,7 +26,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'H2O',
           },
           {
-            id: 3,
             category: 'Science',
             level: "easy",
             text: 'Which planet is known as the Red Planet?',
@@ -36,7 +33,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Mars',
           },
           {
-            id: 4,
             category: 'Science',
             level: "easy",
             text: 'What is the powerhouse of the cell?',
@@ -44,7 +40,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Mitochondria',
           },
           {
-            id: 5,
             category: 'Science',
             level: "easy",
             text: 'What is the largest mammal on Earth?',
@@ -52,7 +47,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Blue whale',
           },
           {
-            id: 6,
             category: 'Science',
             level: "easy",
             text: 'Which gas do plants absorb from the atmosphere?',
@@ -60,7 +54,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Carbon dioxide',
           },
           {
-            id: 7,
             category: 'Science',
             level: "easy",
             text: 'What is the Earth’s primary source of energy?',
@@ -68,7 +61,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Sun',
           },
           {
-            id: 8,
             category: 'Science',
             level: "easy",
             text: 'What is the smallest bone in the human body?',
@@ -76,7 +68,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Cochlea',
           },
           {
-            id: 9,
             category: 'Science',
             level: "easy",
             text: 'Which gas do plants release during photosynthesis?',
@@ -84,7 +75,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Oxygen',
           },
           {
-            id: 10,
             category: 'Science',
             level: "medium",
             text: 'What is the chemical symbol for gold?',
@@ -92,7 +82,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Au',
           },
           {
-            id: 11,
             category: 'Science',
             level: "medium",
             text: 'Which planet is known as the "Morning Star" or "Evening Star"?',
@@ -100,7 +89,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Venus',
           },
           {
-            id: 12,
             category: 'Science',
             level: "medium",
             text: 'What is the process by which plants make their own food?',
@@ -108,7 +96,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Photosynthesis',
           },
           {
-            id: 13,
             category: 'Science',
             level: "medium",
             text: 'Which element is essential for the formation of bones in the human body?',
@@ -116,7 +103,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Calcium',
           },
           {
-            id: 14,
             category: 'Science',
             level: "medium",
             text: 'What is the freezing point of water in Celsius?',
@@ -124,7 +110,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: '0°C',
           },
           {
-            id: 15,
             category: 'Science',
             level: "medium",
             text: 'Which force holds the nucleus of an atom together?',
@@ -132,7 +117,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Nuclear force',
           },
           {
-            id: 16,
             category: 'Science',
             level: "medium",
             text: 'What is the largest organ in the human body?',
@@ -140,7 +124,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Skin',
           },
           {
-            id: 17,
             category: 'Science',
             level: "medium",
             text: 'What is the chemical symbol for oxygen?',
@@ -148,7 +131,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'O2',
           },
           {
-            id: 18,
             category: 'Science',
             level: "hard",
             text: 'What is the speed of light in a vacuum?',
@@ -156,7 +138,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: '299,792 km/s',
           },
           {
-            id: 19,
             category: 'Science',
             level: "hard",
             text: 'In chemistry, what does the term "pH" measure?',
@@ -164,7 +145,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Potential of Hydrogen',
           },
           {
-            id: 20,
             category: 'Science',
             level: "hard",
             text: 'What is the smallest particle of an element that retains its chemical properties?',
@@ -172,7 +152,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Atom',
           },
           {
-            id: 21,
             category: 'Science',
             level: "hard",
             text: 'Who developed the theory of general relativity?',
@@ -180,7 +159,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Albert Einstein',
           },
           {
-            id: 22,
             category: 'Science',
             level: "hard",
             text: 'What is the unit of electrical resistance?',
@@ -188,7 +166,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Ohm',
           },
           {
-            id: 23,
             category: 'Science',
             level: "hard",
             text: 'Which gas makes up the majority of the Earth\'s atmosphere?',
@@ -196,7 +173,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Nitrogen',
           },
           {
-            id: 24,
             category: 'Science',
             level: "hard",
             text: 'What is the process by which a cell divides into two daughter cells?',
@@ -204,7 +180,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Mitosis',
           },
           {
-            id: 25,
             category: 'Science',
             level: "hard",
             text: 'What is the temperature at which all molecular motion ceases?',
@@ -212,7 +187,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: '-273.15°C',
           },
           {
-            id: 26,
             category: 'Pop Culture',
             level: "easy",
             text: 'Who is known as the "King of Pop"?',
@@ -220,7 +194,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Michael Jackson',
           },
           {
-            id: 27,
             category: 'Pop Culture',
             level: "easy",
             text: 'Which animated film features a character named Simba?',
@@ -228,7 +201,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'The Lion King',
           },
           {
-            id: 28,
             category: 'Pop Culture',
             level: "easy",
             text: 'What is the name of Harry Potter\'s owl?',
@@ -236,7 +208,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Hedwig',
           },
           {
-            id: 29,
             category: 'Pop Culture',
             level: "easy",
             text: 'Which superhero is known for his web-slinging abilities?',
@@ -244,7 +215,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Spider-Man',
           },
           {
-            id: 30,
             category: 'Pop Culture',
             level: "easy",
             text: 'What is the name of the famous wizarding school in the Harry Potter series?',
@@ -252,7 +222,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Hogwarts',
           },
           {
-            id: 31,
             category: 'Pop Culture',
             level: "easy",
             text: 'Which Disney princess has a magic golden flower?',
@@ -260,7 +229,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Rapunzel',
           },
           {
-            id: 32,
             category: 'Pop Culture',
             level: "easy",
             text: 'Who played the character Jack Dawson in the movie Titanic?',
@@ -268,7 +236,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Leonardo DiCaprio',
           },
           {
-            id: 33,
             category: 'Pop Culture',
             level: "easy",
             text: 'Which TV series features characters named Ross, Rachel, and Chandler?',
@@ -276,7 +243,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Friends',
           },
           {
-            id: 34,
             category: 'Pop Culture',
             level: "medium",
             text: 'Which iconic movie features a character named Don Vito Corleone?',
@@ -284,7 +250,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'The Godfather',
           },
           {
-            id: 35,
             category: 'Pop Culture',
             level: "medium",
             text: 'In which year did the first episode of "Game of Thrones" air?',
@@ -292,7 +257,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: '2011',
           },
           {
-            id: 36,
             category: 'Pop Culture',
             level: "medium",
             text: 'What is the name of the fictional African country in the movie "Black Panther"?',
@@ -300,7 +264,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Wakanda',
           },
           {
-            id: 37,
             category: 'Pop Culture',
             level: "medium",
             text: 'Who is the lead singer of the band Queen?',
@@ -308,7 +271,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Freddie Mercury',
           },
           {
-            id: 38,
             category: 'Pop Culture',
             level: "medium",
             text: 'What is the name of the fictional wizarding sport played on broomsticks in Harry Potter?',
@@ -316,7 +278,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Quidditch',
           },
           {
-            id: 39,
             category: 'Pop Culture',
             level: "medium",
             text: 'Who wrote the play "Romeo and Juliet"?',
@@ -324,7 +285,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'William Shakespeare',
           },
           {
-            id: 40,
             category: 'Pop Culture',
             level: "medium",
             text: 'What is the name of the fictional wizarding school in the "Harry Potter" series?',
@@ -332,7 +292,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Hogwarts',
           },
           {
-            id: 41,
             category: 'Pop Culture',
             level: "medium",
             text: 'Which animated film features a character named Elsa with ice powers?',
@@ -340,7 +299,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Frozen',
           },
           {
-            id: 42,
             category: 'Pop Culture',
             level: "medium",
             text: 'Which actor played the character Tony Stark/Iron Man in the Marvel Cinematic Universe?',
@@ -348,7 +306,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Robert Downey Jr.',
           },
           {
-            id: 43,
             category: 'Pop Culture',
             level: "hard",
             text: 'In the TV series "Breaking Bad," what is the street name of Walter White’s blue meth?',
@@ -356,7 +313,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Blue Sky',
           },
           {
-            id: 44,
             category: 'Pop Culture',
             level: "hard",
             text: 'Who wrote the dystopian novel "1984"?',
@@ -364,7 +320,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'George Orwell',
           },
           {
-            id: 45,
             category: 'Pop Culture',
             level: "hard",
             text: 'Which animated film features the character Buzz Lightyear?',
@@ -372,7 +327,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Toy Story',
           },
           {
-            id: 46,
             category: 'Pop Culture',
             level: "hard",
             text: 'In the film "The Matrix," what is the real name of the character Neo?',
@@ -380,7 +334,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Thomas Anderson',
           },
           {
-            id: 47,
             category: 'Pop Culture',
             level: "hard",
             text: 'Who directed the 1994 film "Pulp Fiction"?',
@@ -388,7 +341,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Quentin Tarantino',
           },
           {
-            id: 48,
             category: 'Pop Culture',
             level: "hard",
             text: 'What is the name of the fictional newspaper in the "Harry Potter" series?',
@@ -396,7 +348,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'The Daily Prophet',
           },
           {
-            id: 49,
             category: 'Pop Culture',
             level: "hard",
             text: 'Which character says the famous line "Here’s looking at you, kid" in the film "Casablanca"?',
@@ -404,7 +355,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Humphrey Bogart',
           },
           {
-            id: 50,
             category: 'History',
             level: 'Easy',
             text: 'Who was the first President of the United States?',
@@ -412,7 +362,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'George Washington',
           },
           {
-            id: 51,
             category: 'History',
             level: 'Easy',
             text: 'In what year did Christopher Columbus first reach the Americas?',
@@ -420,7 +369,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: '1492',
           },
           {
-            id: 52,
             category: 'History',
             level: 'Easy',
             text: 'Which ancient civilization built the pyramids?',
@@ -428,7 +376,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Egyptian',
           },
           {
-            id: 53,
             category: 'History',
             level: 'Easy',
             text: 'Who was the legendary queen of ancient Egypt?',
@@ -436,7 +383,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Cleopatra',
           },
           {
-            id: 54,
             category: 'History',
             level: 'Easy',
             text: 'What event marked the start of World War I?',
@@ -444,7 +390,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Assassination of Archduke',
           },
           {
-            id: 55,
             category: 'History',
             level: 'Easy',
             text: 'Who wrote the "I Have a Dream" speech?',
@@ -452,7 +397,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Martin Luther King Jr.',
           },
           {
-            id: 56,
             category: 'History',
             level: 'Easy',
             text: 'Which civilization built the Great Wall of China?',
@@ -460,7 +404,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Qin Dynasty',
           },
           {
-            id: 57,
             category: 'History',
             level: 'Easy',
             text: 'Who was the leader of the Soviet Union during World War II?',
@@ -468,7 +411,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Joseph Stalin',
           },
           {
-            id: 58,
             category: 'History',
             level: 'Medium',
             text: 'Which war was fought between the North and South regions of the United States?',
@@ -476,7 +418,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Civil War',
           },
           {
-            id: 59,
             category: 'History',
             level: 'Medium',
             text: 'Who was the first Emperor of China?',
@@ -484,7 +425,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Emperor Qin Shi Huang',
           },
           {
-            id: 60,
             category: 'History',
             level: 'Medium',
             text: 'What event is known as the "Night of Broken Glass," a violent anti-Jewish pogrom?',
@@ -492,7 +432,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Kristallnacht',
           },
           {
-            id: 61,
             category: 'History',
             level: 'Medium',
             text: 'Which ancient civilization created the first known system of writing, known as cuneiform?',
@@ -500,7 +439,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Sumerians',
           },
           {
-            id: 62,
             category: 'History',
             level: 'Medium',
             text: 'Who was the founder of the Mongol Empire?',
@@ -508,7 +446,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Genghis Khan',
           },
           {
-            id: 63,
             category: 'History',
             level: 'Medium',
             text: 'Which battle is considered the turning point of the Pacific War during World War II?',
@@ -516,7 +453,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Battle of Midway',
           },
           {
-            id: 64,
             category: 'History',
             level: 'Medium',
             text: 'Who was the first woman to win a Nobel Prize?',
@@ -524,7 +460,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Marie Curie',
           },
           {
-            id: 65,
             category: 'History',
             level: 'Medium',
             text: 'What political ideology was associated with Karl Marx and Friedrich Engels?',
@@ -532,7 +467,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Communism',
           },
           {
-            id: 66,
             category: 'History',
             level: 'Hard',
             text: 'Who was the first Roman Emperor?',
@@ -540,7 +474,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Augustus',
           },
           {
-            id: 67,
             category: 'History',
             level: 'Hard',
             text: 'What ancient city was known as the "City of a Thousand Minarets"?',
@@ -548,7 +481,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Cairo',
           },
           {
-            id: 68,
             category: 'History',
             level: 'Hard',
             text: 'Which empire was ruled by Emperor Justinian I in the 6th century AD?',
@@ -556,7 +488,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Byzantine Empire',
           },
           {
-            id: 69,
             category: 'History',
             level: 'Hard',
             text: 'Who was the last Tsar of Russia before the Russian Revolution?',
@@ -564,7 +495,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Nicholas II',
           },
           {
-            id: 70,
             category: 'History',
             level: 'Hard',
             text: 'Which ancient civilization built the city of Carthage in North Africa?',
@@ -572,7 +502,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Phoenicians',
           },
           {
-            id: 71,
             category: 'History',
             level: 'Hard',
             text: 'In which year did the Spanish Armada attempt to invade England?',
@@ -580,7 +509,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: '1588',
           },
           {
-            id: 72,
             category: 'History',
             level: 'Hard',
             text: 'What ancient wonder was located in the city of Babylon?',
@@ -588,7 +516,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Hanging Gardens',
           },
           {
-            id: 73,
             category: 'History',
             level: 'Hard',
             text: 'Which Chinese philosopher is known for his teachings on ethics and morality?',
@@ -596,7 +523,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Confucius',
           },
           {
-            id: 82,
             category: 'Technology',
             level: 'Medium',
             text: 'Which programming language is known for its use in data analysis and machine learning?',
@@ -604,7 +530,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Python',
           },
           {
-            id: 83,
             category: 'Technology',
             level: 'Medium',
             text: 'What does the acronym "VPN" stand for?',
@@ -612,7 +537,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Virtual Private Network',
           },
           {
-            id: 84,
             category: 'Technology',
             level: 'Medium',
             text: 'Who is often referred to as the co-founder of Microsoft?',
@@ -620,7 +544,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Bill Gates',
           },
           {
-            id: 85,
             category: 'Technology',
             level: 'Medium',
             text: 'What is the purpose of an operating system?',
@@ -628,7 +551,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Manage hardware resources',
           },
           {
-            id: 86,
             category: 'Technology',
             level: 'Medium',
             text: 'Which social media platform is known for its character limit on posts?',
@@ -636,7 +558,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Twitter',
           },
           {
-            id: 87,
             category: 'Technology',
             level: 'Medium',
             text: 'In computer terms, what does "GUI" stand for?',
@@ -644,7 +565,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Graphical User Interface',
           },
           {
-            id: 88,
             category: 'Technology',
             level: 'Medium',
             text: 'Which company is known for its gaming console series, PlayStation?',
@@ -652,7 +572,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Sony',
           },
           {
-            id: 89,
             category: 'Technology',
             level: 'Medium',
             text: 'What is the purpose of the HTML "DOCTYPE" declaration?',
@@ -660,7 +579,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Define document type and version',
           },
           {
-            id: 90,
             category: 'Technology',
             level: 'Hard',
             text: 'What is the primary purpose of the programming language Assembly?',
@@ -668,7 +586,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'System-level programming',
           },
           {
-            id: 91,
             category: 'Technology',
             level: 'Hard',
             text: 'Which cryptographic algorithm is commonly used for secure communication over the internet?',
@@ -676,7 +593,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'RSA',
           },
           {
-            id: 92,
             category: 'Technology',
             level: 'Hard',
             text: 'What is the concept of "big data" associated with?',
@@ -684,7 +600,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Massive data analysis',
           },
           {
-            id: 93,
             category: 'Technology',
             level: 'Hard',
             text: 'Which programming paradigm focuses on the declarative specification of how a program should accomplish a task?',
@@ -692,7 +607,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Functional programming',
           },
           {
-            id: 94,
             category: 'Technology',
             level: 'Hard',
             text: 'In computer security, what does the term "firewall" refer to?',
@@ -700,7 +614,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Network security device',
           },
           {
-            id: 95,
             category: 'Technology',
             level: 'Hard',
             text: 'What is the primary function of the protocol HTTPS?',
@@ -708,7 +621,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Web page encryption',
           },
           {
-            id: 96,
             category: 'Technology',
             level: 'Hard',
             text: 'Which algorithm is commonly used for artificial neural networks and deep learning?',
@@ -716,7 +628,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Backpropagation',
           },
           {
-            id: 97,
             category: 'Technology',
             level: 'Hard',
             text: 'What does the term "blockchain" refer to in the context of technology?',
@@ -724,7 +635,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Distributed ledger for transactions',
           },
           {
-            id: 100,
             category: 'Art',
             level: 'Easy',
             text: 'Who painted the Mona Lisa?',
@@ -732,7 +642,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Leonardo da Vinci',
           },
           {
-            id: 101,
             category: 'Art',
             level: 'Easy',
             text: 'Which artist is known for his impressionist paintings of water lilies?',
@@ -740,7 +649,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Claude Monet',
           },
           {
-            id: 102,
             category: 'Art',
             level: 'Easy',
             text: 'Who created the famous sculpture of David?',
@@ -748,7 +656,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Michelangelo',
           },
           {
-            id: 103,
             category: 'Art',
             level: 'Easy',
             text: 'Which artist is associated with the melting clocks in the painting "The Persistence of Memory"?',
@@ -756,7 +663,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Salvador Dalí',
           },
           {
-            id: 104,
             category: 'Art',
             level: 'Easy',
             text: 'Who is known for creating large, colorful, and abstract paintings like "Number 5, 1948"?',
@@ -764,7 +670,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Jackson Pollock',
           },
           {
-            id: 105,
             category: 'Art',
             level: 'Easy',
             text: 'Which artist is famous for painting sunflowers?',
@@ -772,7 +677,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Vincent van Gogh',
           },
           {
-            id: 106,
             category: 'Art',
             level: 'Easy',
             text: 'Who is known for his paintings of "soup cans"?',
@@ -780,7 +684,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Andy Warhol',
           },
           {
-            id: 107,
             category: 'Art',
             level: 'Easy',
             text: 'Which artist is famous for her self-portraits, often depicting her distinctive unibrow?',
@@ -788,7 +691,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Frida Kahlo',
           },
           {
-            id: 108,
             category: 'Art',
             level: 'Medium',
             text: 'Who painted "The Starry Night"?',
@@ -796,7 +698,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Vincent van Gogh',
           },
           {
-            id: 109,
             category: 'Art',
             level: 'Medium',
             text: 'Which artist is known for creating "The Scream"?',
@@ -804,7 +705,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Edvard Munch',
           },
           {
-            id: 110,
             category: 'Art',
             level: 'Medium',
             text: 'Who sculpted the statue of David in Florence, Italy?',
@@ -812,7 +712,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Michelangelo',
           },
           {
-            id: 111,
             category: 'Art',
             level: 'Medium',
             text: 'Which art movement is characterized by geometric shapes and primary colors?',
@@ -820,7 +719,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Cubism',
           },
           {
-            id: 112,
             category: 'Art',
             level: 'Medium',
             text: 'Who is known for his paintings of ballet dancers and horse races?',
@@ -828,7 +726,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Edgar Degas',
           },
           {
-            id: 113,
             category: 'Art',
             level: 'Medium',
             text: 'Which artist is associated with the art movement called "The Blue Rider"?',
@@ -836,7 +733,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Wassily Kandinsky',
           },
           {
-            id: 114,
             category: 'Art',
             level: 'Medium',
             text: 'Who painted "Guernica," a powerful anti-war mural?',
@@ -844,7 +740,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Pablo Picasso',
           },
           {
-            id: 115,
             category: 'Art',
             level: 'Medium',
             text: 'Which artist is known for his mobile sculptures that move with air currents?',
@@ -852,7 +747,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Alexander Calder',
           },
           {
-            id: 116,
             category: 'Art',
             level: 'Hard',
             text: 'Who painted "Les Demoiselles d\'Avignon," a groundbreaking work in the development of Cubism?',
@@ -860,7 +754,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Pablo Picasso',
           },
           {
-            id: 117,
             category: 'Art',
             level: 'Hard',
             text: 'Which artist is known for his "readymades," ordinary objects presented as works of art?',
@@ -868,7 +761,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Marcel Duchamp',
           },
           {
-            id: 118,
             category: 'Art',
             level: 'Hard',
             text: 'Who created the large-scale environmental artwork "The Lightning Field"?',
@@ -876,7 +768,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Walter De Maria',
           },
           {
-            id: 119,
             category: 'Art',
             level: 'Hard',
             text: 'Which artist is associated with the photorealist painting style?',
@@ -884,7 +775,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Chuck Close',
           },
           {
-            id: 120,
             category: 'Art',
             level: 'Hard',
             text: 'Who designed the iconic glass pyramid at the Louvre Museum in Paris?',
@@ -892,7 +782,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'I. M. Pei',
           },
           {
-            id: 121,
             category: 'Art',
             level: 'Hard',
             text: 'Which artist created the series "The Gates" in New York City\'s Central Park?',
@@ -900,7 +789,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Christo and Jeanne-Claude',
           },
           {
-            id: 122,
             category: 'Art',
             level: 'Hard',
             text: 'Who painted the famous mural "Man at the Crossroads" at Rockefeller Center?',
@@ -908,7 +796,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Diego Rivera',
           },
           {
-            id: 123,
             category: 'Art',
             level: 'Hard',
             text: 'Which artist is known for his large-scale outdoor sculptures like "Balloon Flower"?',
@@ -916,7 +803,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Jeff Koons',
           },
           {
-            id: 124,
             category: 'Sports',
             level: 'Easy',
             text: 'In which sport does a pitcher throw a ball to a batter?',
@@ -924,7 +810,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Baseball',
           },
           {
-            id: 125,
             category: 'Sports',
             level: 'Easy',
             text: 'What is the object of the game in basketball?',
@@ -932,7 +817,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Score most points',
           },
           {
-            id: 126,
             category: 'Sports',
             level: 'Easy',
             text: 'Which sport is played on a rectangular field with a goal at each end?',
@@ -940,7 +824,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Soccer',
           },
           {
-            id: 127,
             category: 'Sports',
             level: 'Easy',
             text: 'What is the primary objective in golf?',
@@ -948,7 +831,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Sink ball in fewest strokes',
           },
           {
-            id: 128,
             category: 'Sports',
             level: 'Easy',
             text: 'In which sport might you perform a slam dunk?',
@@ -956,7 +838,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Basketball',
           },
           {
-            id: 129,
             category: 'Sports',
             level: 'Easy',
             text: 'What is the primary objective in baseball? To score the most: ',
@@ -964,7 +845,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Runs',
           },
           {
-            id: 130,
             category: 'Sports',
             level: 'Easy',
             text: 'In which sport might you see a home run?',
@@ -972,7 +852,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Baseball',
           },
           {
-            id: 131,
             category: 'Sports',
             level: 'Easy',
             text: 'What is the term for a perfect score in bowling?',
@@ -980,7 +859,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Strike',
           },
           {
-            id: 132,
             category: 'Sports',
             level: 'Medium',
             text: 'Which country won the FIFA World Cup in 2018?',
@@ -988,7 +866,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'France',
           },
           {
-            id: 133,
             category: 'Sports',
             level: 'Medium',
             text: 'Who holds the record for the most Olympic gold medals in athletics?',
@@ -996,7 +873,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Usain Bolt',
           },
           {
-            id: 134,
             category: 'Sports',
             level: 'Medium',
             text: 'What is the national sport of Japan?',
@@ -1004,7 +880,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Sumo wrestling',
           },
           {
-            id: 135,
             category: 'Sports',
             level: 'Medium',
             text: 'Who is known as "The Greatest" in boxing?',
@@ -1012,7 +887,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Muhammad Ali',
           },
           {
-            id: 136,
             category: 'Sports',
             level: 'Medium',
             text: 'Which tennis player has won the most Grand Slam singles titles?',
@@ -1020,7 +894,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Margaret Court',
           },
           {
-            id: 137,
             category: 'Sports',
             level: 'Medium',
             text: 'In which year did the first modern Olympic Games take place?',
@@ -1028,7 +901,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: '1896',
           },
           {
-            id: 138,
             category: 'Sports',
             level: 'Medium',
             text: 'Which NFL team has won the most Super Bowls?',
@@ -1036,7 +908,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'New England Patriots',
           },
           {
-            id: 139,
             category: 'Sports',
             level: 'Medium',
             text: 'Who won the Tour de France a record seven consecutive times?',
@@ -1044,7 +915,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Lance Armstrong',
           },
           {
-            id: 140,
             category: 'Sports',
             level: 'Hard',
             text: 'Which country hosted the Summer Olympics in 2008?',
@@ -1052,7 +922,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'China',
           },
           {
-            id: 141,
             category: 'Sports',
             level: 'Hard',
             text: 'Who is the only boxer to finish his career undefeated in both amateur and professional boxing?',
@@ -1060,7 +929,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Floyd Mayweather',
           },
           {
-            id: 142,
             category: 'Sports',
             level: 'Hard',
             text: 'In which year did the first official cricket Test match take place?',
@@ -1068,7 +936,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: '1877',
           },
           {
-            id: 143,
             category: 'Sports',
             level: 'Hard',
             text: 'Who holds the record for the most career goals in men\'s international football?',
@@ -1076,7 +943,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Cristiano Ronaldo',
           },
           {
-            id: 144,
             category: 'Sports',
             level: 'Hard',
             text: 'Which country has won the most gold medals in the Winter Olympics?',
@@ -1084,7 +950,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Norway',
           },
           {
-            id: 145,
             category: 'Sports',
             level: 'Hard',
             text: 'Who is the only athlete to have won Olympic gold medals in both the 100m and 200m sprints in three consecutive Olympics?',
@@ -1092,7 +957,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Usain Bolt',
           },
           {
-            id: 146,
             category: 'Sports',
             level: 'Hard',
             text: 'Which boxer is known as "The Real Deal"?',
@@ -1100,7 +964,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Evander Holyfield',
           },
           {
-            id: 147,
             category: 'Sports',
             level: 'Hard',
             text: 'In which year did the first Wimbledon tennis championship take place?',
@@ -1108,7 +971,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: '1877',
           },
           {
-            id: 150,
             category: 'Geography',
             level: 'Easy',
             text: 'What is the capital of France?',
@@ -1116,7 +978,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Paris',
           },
           {
-            id: 151,
             category: 'Geography',
             level: 'Easy',
             text: 'Which river is the longest in the world?',
@@ -1124,7 +985,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Nile',
           },
           {
-            id: 152,
             category: 'Geography',
             level: 'Easy',
             text: 'In which continent is the Sahara Desert located?',
@@ -1132,7 +992,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Africa',
           },
           {
-            id: 153,
             category: 'Geography',
             level: 'Easy',
             text: 'What is the largest ocean on Earth?',
@@ -1140,7 +999,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Pacific Ocean',
           },
           {
-            id: 154,
             category: 'Geography',
             level: 'Easy',
             text: 'Which country is known as the Land of the Rising Sun?',
@@ -1148,7 +1006,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Japan',
           },
           {
-            id: 155,
             category: 'Geography',
             level: 'Easy',
             text: 'What is the capital of Australia?',
@@ -1156,7 +1013,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Canberra',
           },
           {
-            id: 156,
             category: 'Geography',
             level: 'Easy',
             text: 'Which mountain is the highest in the world?',
@@ -1164,7 +1020,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Mount Everest',
           },
           {
-            id: 157,
             category: 'Geography',
             level: 'Easy',
             text: 'Which canal connects the Mediterranean Sea to the Red Sea?',
@@ -1172,7 +1027,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Suez Canal',
           },
           {
-            id: 158,
             category: 'Geography',
             level: 'Medium',
             text: 'Which two countries share the longest international border?',
@@ -1180,7 +1034,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Canada, USA',
           },
           {
-            id: 159,
             category: 'Geography',
             level: 'Medium',
             text: 'What is the capital of Canada?',
@@ -1188,7 +1041,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Ottawa',
           },
           {
-            id: 160,
             category: 'Geography',
             level: 'Medium',
             text: 'Which African country is known as the "Pearl of Africa"?',
@@ -1196,7 +1048,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Uganda',
           },
           {
-            id: 161,
             category: 'Geography',
             level: 'Medium',
             text: 'In which ocean are the Maldives located?',
@@ -1204,7 +1055,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Indian Ocean',
           },
           {
-            id: 162,
             category: 'Geography',
             level: 'Medium',
             text: 'Which river is the longest in South America?',
@@ -1212,7 +1062,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Amazon River',
           },
           {
-            id: 163,
             category: 'Geography',
             level: 'Medium',
             text: 'What is the capital of South Korea?',
@@ -1220,7 +1069,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Seoul',
           },
           {
-            id: 164,
             category: 'Geography',
             level: 'Medium',
             text: 'Which desert is the largest in the world?',
@@ -1228,7 +1076,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Sahara Desert',
           },
           {
-            id: 165,
             category: 'Geography',
             level: 'Medium',
             text: 'What is the capital of Argentina?',
@@ -1236,7 +1083,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Buenos Aires',
           },
           {
-            id: 166,
             category: 'Geography',
             level: 'Hard',
             text: 'Which two countries are separated by the Durand Line?',
@@ -1244,7 +1090,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Afghanistan, Pakistan',
           },
           {
-            id: 167,
             category: 'Geography',
             level: 'Hard',
             text: 'What is the smallest independent country in the world?',
@@ -1252,7 +1097,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Vatican City',
           },
           {
-            id: 168,
             category: 'Geography',
             level: 'Hard',
             text: 'Which African country is known as the "Land of a Thousand Hills"?',
@@ -1260,7 +1104,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Rwanda',
           },
           {
-            id: 169,
             category: 'Geography',
             level: 'Hard',
             text: 'In which mountain range is Mount Everest located?',
@@ -1268,7 +1111,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Himalayas',
           },
           {
-            id: 170,
             category: 'Geography',
             level: 'Hard',
             text: 'What is the capital of Kazakhstan?',
@@ -1276,7 +1118,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Nur-Sultan',
           },
           {
-            id: 171,
             category: 'Geography',
             level: 'Hard',
             text: 'Which river is the longest in the world?',
@@ -1284,7 +1125,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Nile',
           },
           {
-            id: 172,
             category: 'Geography',
             level: 'Hard',
             text: 'What is the capital of Mongolia?',
@@ -1292,7 +1132,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Ulaanbaatar',
           },
           {
-            id: 173,
             category: 'Geography',
             level: 'Hard',
             text: 'Which lake is the largest by surface area in Africa?',
@@ -1300,7 +1139,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Victoria',
           },
           {
-            id: 174,
             category: 'Cuisine',
             level: 'Easy',
             text: 'What is the main ingredient in guacamole?',
@@ -1308,7 +1146,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Avocado',
           },
           {
-            id: 175,
             category: 'Cuisine',
             level: 'Easy',
             text: 'Which country is famous for sushi?',
@@ -1316,7 +1153,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Japan',
           },
           {
-            id: 176,
             category: 'Cuisine',
             level: 'Easy',
             text: 'What is the traditional bread in France?',
@@ -1324,7 +1160,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Baguette',
           },
           {
-            id: 177,
             category: 'Cuisine',
             level: 'Easy',
             text: 'What is the main ingredient in hummus?',
@@ -1332,7 +1167,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Chickpeas',
           },
           {
-            id: 178,
             category: 'Cuisine',
             level: 'Easy',
             text: 'Which spice gives Indian curry its yellow color?',
@@ -1340,7 +1174,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Turmeric',
           },
           {
-            id: 179,
             category: 'Cuisine',
             level: 'Easy',
             text: 'What is the traditional pasta of Italy?',
@@ -1348,7 +1181,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Spaghetti',
           },
           {
-            id: 180,
             category: 'Cuisine',
             level: 'Easy',
             text: 'In which country did the sandwich originate?',
@@ -1356,7 +1188,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'England',
           },
           {
-            id: 181,
             category: 'Cuisine',
             level: 'Easy',
             text: 'What is the primary ingredient in paella?',
@@ -1364,7 +1195,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Rice',
           },
           {
-            id: 182,
             category: 'Cuisine',
             level: 'Medium',
             text: 'Which country is known for its spicy cuisine, including dishes like kimchi and bulgogi?',
@@ -1372,7 +1202,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'South Korea',
           },
           {
-            id: 183,
             category: 'Cuisine',
             level: 'Medium',
             text: 'What is the traditional Mexican dish consisting of a folded or rolled tortilla filled with various ingredients?',
@@ -1380,7 +1209,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Burrito',
           },
           {
-            id: 184,
             category: 'Cuisine',
             level: 'Medium',
             text: 'Which Italian dish is a rice dish typically cooked in broth to a creamy consistency?',
@@ -1388,7 +1216,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Risotto',
           },
           {
-            id: 185,
             category: 'Cuisine',
             level: 'Medium',
             text: 'In which country did the sandwich originate?',
@@ -1396,7 +1223,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'England',
           },
           {
-            id: 186,
             category: 'Cuisine',
             level: 'Medium',
             text: 'What is the main ingredient in the Middle Eastern dish falafel?',
@@ -1404,7 +1230,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Chickpeas',
           },
           {
-            id: 187,
             category: 'Cuisine',
             level: 'Medium',
             text: 'Which spice is often used in both sweet and savory dishes and comes from the bark of a tree?',
@@ -1412,7 +1237,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Cinnamon',
           },
           {
-            id: 188,
             category: 'Cuisine',
             level: 'Medium',
             text: 'What is the traditional Scottish dish made of minced meat and oatmeal?',
@@ -1420,7 +1244,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Haggis',
           },
           {
-            id: 189,
             category: 'Cuisine',
             level: 'Medium',
             text: 'Which Asian cuisine is known for its use of raw fish and vinegared rice?',
@@ -1428,7 +1251,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Japanese',
           },
           {
-            id: 190,
             category: 'Cuisine',
             level: 'Hard',
             text: 'What is the traditional fermented beverage made from rice in Japanese cuisine?',
@@ -1436,7 +1258,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Sake',
           },
           {
-            id: 191,
             category: 'Cuisine',
             level: 'Hard',
             text: 'In which country did the dish "Peking duck" originate?',
@@ -1444,7 +1265,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'China',
           },
           {
-            id: 192,
             category: 'Cuisine',
             level: 'Hard',
             text: 'What is the name of the traditional Mexican soup made with tripe and chili peppers?',
@@ -1452,7 +1272,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Menudo',
           },
           {
-            id: 193,
             category: 'Cuisine',
             level: 'Hard',
             text: 'Which spice, derived from the flower buds of a tree, is one of the most expensive spices in the world?',
@@ -1460,7 +1279,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Saffron',
           },
           {
-            id: 194,
             category: 'Cuisine',
             level: 'Hard',
             text: 'What is the primary ingredient in the Indian dish "Saag Paneer"?',
@@ -1468,7 +1286,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Paneer',
           },
           {
-            id: 195,
             category: 'Cuisine',
             level: 'Hard',
             text: 'Which French dish consists of a round, flat pastry with sweet or savory toppings?',
@@ -1476,7 +1293,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Crêpe',
           },
           {
-            id: 196,
             category: 'Cuisine',
             level: 'Hard',
             text: 'What is the traditional Ethiopian flatbread made from fermented teff flour?',
@@ -1484,7 +1300,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Injera',
           },
           {
-            id: 197,
             category: 'Cuisine',
             level: 'Hard',
             text: 'Which Southeast Asian fruit, known for its strong odor, is often banned in hotels and public transportation?',
@@ -1492,7 +1307,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Durian',
           },
           {
-            id: 200,
             category: 'Literature',
             level: 'Easy',
             text: 'Who is the author of "Romeo and Juliet"?',
@@ -1500,7 +1314,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'William Shakespeare',
           },
           {
-            id: 201,
             category: 'Literature',
             level: 'Easy',
             text: 'What is the setting of the novel "To Kill a Mockingbird"?',
@@ -1508,7 +1321,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Maycomb',
           },
           {
-            id: 202,
             category: 'Literature',
             level: 'Easy',
             text: 'In which play does the character Hamlet appear?',
@@ -1516,7 +1328,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Hamlet',
           },
           {
-            id: 203,
             category: 'Literature',
             level: 'Easy',
             text: 'What is the first book in J.K. Rowling\'s "Harry Potter" series?',
@@ -1524,7 +1335,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'The Sorceror\'s Stone',
           },
           {
-            id: 204,
             category: 'Literature',
             level: 'Easy',
             text: 'Who wrote the play "Macbeth"?',
@@ -1532,7 +1342,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'William Shakespeare',
           },
           {
-            id: 205,
             category: 'Literature',
             level: 'Easy',
             text: 'What is the name of the hobbit protagonist in J.R.R. Tolkien\'s "The Lord of the Rings"?',
@@ -1540,7 +1349,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Frodo Baggins',
           },
           {
-            id: 206,
             category: 'Literature',
             level: 'Easy',
             text: 'Who is the author of "Pride and Prejudice"?',
@@ -1548,7 +1356,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Jane Austen',
           },
           {
-            id: 207,
             category: 'Literature',
             level: 'Easy',
             text: 'What is the title of the first book in the "Hunger Games" series?',
@@ -1556,7 +1363,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'The Hunger Games',
           },
           {
-            id: 208,
             category: 'Literature',
             level: 'Medium',
             text: 'Who wrote the tragedy "King Lear"?',
@@ -1564,7 +1370,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'William Shakespeare',
           },
           {
-            id: 209,
             category: 'Literature',
             level: 'Medium',
             text: 'In George Orwell\'s "Animal Farm," what type of animal is Napoleon?',
@@ -1572,7 +1377,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Pig',
           },
           {
-            id: 210,
             category: 'Literature',
             level: 'Medium',
             text: 'Who wrote the novel "Jane Eyre"?',
@@ -1580,7 +1384,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Charlotte Brontë',
           },
           {
-            id: 211,
             category: 'Literature',
             level: 'Medium',
             text: 'What is the central theme of Franz Kafka\'s "The Metamorphosis"?',
@@ -1588,7 +1391,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Identity and Alienation',
           },
           {
-            id: 212,
             category: 'Literature',
             level: 'Medium',
             text: 'Who is the protagonist in Mary Shelley\'s "Frankenstein"?',
@@ -1596,7 +1398,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Victor Frankenstein',
           },
           {
-            id: 213,
             category: 'Literature',
             level: 'Medium',
             text: 'What is the title of F. Scott Fitzgerald\'s most famous novel?',
@@ -1604,7 +1405,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'The Great Gatsby',
           },
           {
-            id: 214,
             category: 'Literature',
             level: 'Medium',
             text: 'In "The Catcher in the Rye," what is the name of Holden Caulfield\'s younger sister?',
@@ -1612,7 +1412,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Phoebe',
           },
           {
-            id: 215,
             category: 'Literature',
             level: 'Medium',
             text: 'Which Shakespeare play features the character Iago?',
@@ -1620,7 +1419,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Othello',
           },
           {
-            id: 216,
             category: 'Literature',
             level: 'Hard',
             text: 'In James Joyce\'s "Ulysses," what is the name of the protagonist?',
@@ -1628,7 +1426,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Leopold Bloom',
           },
           {
-            id: 217,
             category: 'Literature',
             level: 'Hard',
             text: 'Who wrote the epic poem "Paradise Lost"?',
@@ -1636,7 +1433,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'John Milton',
           },
           {
-            id: 218,
             category: 'Literature',
             level: 'Hard',
             text: 'Which novel opens with "All happy families are alike; each unhappy family is unhappy in its own way."?',
@@ -1646,7 +1442,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Anna Karenina',
           },
           {
-            id: 219,
             category: 'Literature',
             level: 'Hard',
             text: 'Which Irish author wrote "The Picture of Dorian Gray"?',
@@ -1654,7 +1449,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Oscar Wilde',
           },
           {
-            id: 220,
             category: 'Literature',
             level: 'Hard',
             text: 'Who is the author of the novel "One Hundred Years of Solitude"?',
@@ -1662,7 +1456,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Gabriel García Márquez',
           },
           {
-            id: 221,
             category: 'Literature',
             level: 'Hard',
             text: 'In Dante Alighieri\'s "Divine Comedy," what is the name of the protagonist?',
@@ -1670,7 +1463,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Dante',
           },
           {
-            id: 222,
             category: 'Literature',
             level: 'Hard',
             text: 'Who wrote the play "Long Day\'s Journey into Night"?',
@@ -1678,7 +1470,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Eugene O\'Neill',
           },
           {
-            id: 223,
             category: 'Literature',
             level: 'Hard',
             text: 'What is the real name of the author George Orwell?',
@@ -1686,7 +1477,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Eric Blair',
           },
           {
-            id: 224,
             category: 'Movies & TV',
             level: 'Easy',
             text: 'What is the name of the wizard in "The Lord of the Rings" who guides the Fellowship?',
@@ -1694,7 +1484,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Gandalf',
           },
           {
-            id: 225,
             category: 'Movies & TV',
             level: 'Easy',
             text: 'Who played the character Jack Dawson in the movie "Titanic"?',
@@ -1702,7 +1491,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Leonardo DiCaprio',
           },
           {
-            id: 226,
             category: 'Movies & TV',
             level: 'Easy',
             text: 'In "Friends," what is the name of Ross and Monica\'s sister?',
@@ -1710,7 +1498,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Amy',
           },
           {
-            id: 227,
             category: 'Movies & TV',
             level: 'Easy',
             text: 'Which animated film features a character named Simba?',
@@ -1718,7 +1505,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'The Lion King',
           },
           {
-            id: 228,
             category: 'Movies & TV',
             level: 'Easy',
             text: 'What is the name of Harry Potter\'s owl?',
@@ -1726,7 +1512,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Hedwig',
           },
           {
-            id: 229,
             category: 'Movies & TV',
             level: 'Easy',
             text: 'Who is known as the "King of Pop"?',
@@ -1734,7 +1519,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Michael Jackson',
           },
           {
-            id: 230,
             category: 'Movies & TV',
             level: 'Easy',
             text: 'Which superhero is known for his web-slinging abilities?',
@@ -1742,7 +1526,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Spider-Man',
           },
           {
-            id: 231,
             category: 'Movies & TV',
             level: 'Easy',
             text: 'What is the name of the fictional African country in the movie "Black Panther"?',
@@ -1750,7 +1533,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Wakanda',
           },
           {
-            id: 232,
             category: 'Movies & TV',
             level: 'Medium',
             text: 'Who played the character Tony Stark/Iron Man in the Marvel Cinematic Universe?',
@@ -1758,7 +1540,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Robert Downey Jr.',
           },
           {
-            id: 233,
             category: 'Movies & TV',
             level: 'Medium',
             text: 'In the TV series "Breaking Bad," what is the street name of Walter White’s blue meth?',
@@ -1766,7 +1547,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Blue Sky',
           },
           {
-            id: 234,
             category: 'Movies & TV',
             level: 'Medium',
             text: 'Who wrote the dystopian novel "1984"?',
@@ -1774,7 +1554,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'George Orwell',
           },
           {
-            id: 235,
             category: 'Movies & TV',
             level: 'Medium',
             text: 'Which TV series features characters named Ross, Rachel, and Chandler?',
@@ -1782,7 +1561,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Friends',
           },
           {
-            id: 236,
             category: 'Movies & TV',
             level: 'Medium',
             text: 'Who directed the 1994 film "Pulp Fiction"?',
@@ -1790,7 +1568,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Quentin Tarantino',
           },
           {
-            id: 237,
             category: 'Movies & TV',
             level: 'Medium',
             text: 'What is the name of the fictional newspaper in the "Harry Potter" series?',
@@ -1798,7 +1575,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'The Daily Prophet',
           },
           {
-            id: 238,
             category: 'Movies & TV',
             level: 'Medium',
             text: 'Which character says the famous line "Here’s looking at you, kid" in the film "Casablanca"?',
@@ -1806,7 +1582,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Humphrey Bogart',
           },
           {
-            id: 239,
             category: 'Movies & TV',
             level: 'Medium',
             text: 'In the film "The Matrix," what is the real name of the character Neo?',
@@ -1814,7 +1589,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Thomas Anderson',
           },
           {
-            id: 240,
             category: 'Movies & TV',
             level: 'Hard',
             text: 'Which actor played the character Tony Stark/Iron Man in the Marvel Cinematic Universe?',
@@ -1822,7 +1596,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Robert Downey Jr.',
           },
           {
-            id: 241,
             category: 'Movies & TV',
             level: 'Hard',
             text: 'In the TV series "Breaking Bad," what is the street name of Walter White’s blue meth?',
@@ -1830,7 +1603,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Blue Sky',
           },
           {
-            id: 242,
             category: 'Movies & TV',
             level: 'Hard',
             text: 'Who wrote the dystopian novel "1984"?',
@@ -1838,7 +1610,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'George Orwell',
           },
           {
-            id: 243,
             category: 'Movies & TV',
             level: 'Hard',
             text: 'Which TV series features characters named Ross, Rachel, and Chandler?',
@@ -1846,7 +1617,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Friends',
           },
           {
-            id: 244,
             category: 'Movies & TV',
             level: 'Hard',
             text: 'Who directed the 1994 film "Pulp Fiction"?',
@@ -1854,7 +1624,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Quentin Tarantino',
           },
           {
-            id: 245,
             category: 'Movies & TV',
             level: 'Hard',
             text: 'What is the name of the fictional newspaper in the "Harry Potter" series?',
@@ -1862,7 +1631,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'The Daily Prophet',
           },
           {
-            id: 246,
             category: 'Movies & TV',
             level: 'Hard',
             text: 'Which character says the famous line "Here’s looking at you, kid" in the film "Casablanca"?',
@@ -1870,7 +1638,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Humphrey Bogart',
           },
           {
-            id: 247,
             category: 'Movies & TV',
             level: 'Hard',
             text: 'In the film "The Matrix," what is the real name of the character Neo?',
@@ -1878,7 +1645,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Thomas Anderson',
           },
           {
-            id: 248,
             category: 'Music',
             level: 'Easy',
             text: 'Who is known as the "King of Pop"?',
@@ -1886,47 +1652,41 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Michael Jackson',
           },
           {
-            id: 249,
-            category: 'Music',
+            category: 'Movies & TV',
             level: 'Easy',
             text: 'What is the name of Harry Potter\'s owl?',
             options: ['Hedwig', 'Errol', 'Scabbers', 'Crookshanks'],
             correctAnswer: 'Hedwig',
           },
           {
-            id: 250,
-            category: 'Music',
+            category: 'Pop Culture',
             level: 'Easy',
             text: 'Which superhero is known for his web-slinging abilities?',
             options: ['Superman', 'Batman', 'Spider-Man', 'Iron Man'],
             correctAnswer: 'Spider-Man',
           },
           {
-            id: 251,
-            category: 'Music',
+            category: 'Movies & TV',
             level: 'Easy',
             text: 'Who played the character Jack Dawson in the movie Titanic?',
             options: ['Brad Pitt', 'Leonardo DiCaprio', 'Johnny Depp', 'Tom Cruise'],
             correctAnswer: 'Leonardo DiCaprio',
           },
           {
-            id: 252,
-            category: 'Music',
+            category: 'Pop Culture',
             level: 'Easy',
             text: 'Which Disney princess has a magic golden flower?',
             options: ['Cinderella', 'Rapunzel', 'Ariel', 'Belle'],
             correctAnswer: 'Rapunzel',
           },
           {
-            id: 253,
-            category: 'Music',
+            category: 'Movies & TV',
             level: 'Easy',
             text: 'What is the name of the fictional African country in the movie "Black Panther"?',
             options: ['Wakanda', 'Zamunda', 'Genovia', 'Elbonia'],
             correctAnswer: 'Wakanda',
           },
           {
-            id: 254,
             category: 'Music',
             level: 'Easy',
             text: 'Who is the lead singer of the band Queen?',
@@ -1934,143 +1694,90 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Freddie Mercury',
           },
           {
-            id: 255,
-            category: 'Music',
+            category: 'Movies & TV',
             level: 'Easy',
             text: 'What is the name of the fictional wizarding sport played on broomsticks in Harry Potter?',
             options: ['Broom Ball', 'Quidditch', 'Witchball', 'Magic Soccer'],
             correctAnswer: 'Quidditch',
           },
           {
-            id: 256,
-            category: 'Music',
+            category: 'Movies & TV',
             level: 'Medium',
             text: 'Which animated film features a character named Elsa with ice powers?',
             options: ['Moana', 'Frozen', 'Tangled', 'Brave'],
             correctAnswer: 'Frozen',
           },
           {
-            id: 257,
-            category: 'Music',
+            category: 'Movies & TV',
             level: 'Medium',
             text: 'Which actor played the character Tony Stark/Iron Man in the Marvel Cinematic Universe?',
             options: ['Chris Evans', 'Robert Downey Jr.', 'Chris Hemsworth', 'Mark Ruffalo'],
             correctAnswer: 'Robert Downey Jr.',
           },
           {
-            id: 258,
-            category: 'Music',
+            category: 'Movies & TV',
             level: 'Medium',
             text: 'In the TV series "Breaking Bad," what is the street name of Walter White’s blue meth?',
             options: ['Blue Ice', 'Crystal Clear', 'Blue Sky', 'Meth Blue'],
             correctAnswer: 'Blue Sky',
           },
           {
-            id: 259,
-            category: 'Music',
+            category: 'Pop Culture',
             level: 'Medium',
             text: 'Who wrote the dystopian novel "1984"?',
             options: ['Aldous Huxley', 'Ray Bradbury', 'George Orwell', 'H.G. Wells'],
             correctAnswer: 'George Orwell',
           },
           {
-            id: 260,
-            category: 'Music',
+            category: 'Movies & TV',
             level: 'Medium',
             text: 'Which character says the famous line "Here’s looking at you, kid" in the film "Casablanca"?',
             options: ['Humphrey Bogart', 'Ingrid Bergman', 'Claude Rains', 'Paul Henreid'],
             correctAnswer: 'Humphrey Bogart',
           },
           {
-            id: 261,
-            category: 'Music',
+            category: 'Pop Culture',
             level: 'Medium',
             text: 'What is the name of the fictional newspaper in the "Harry Potter" series?',
             options: ['The Daily Bugle', 'The Daily Prophet', 'The Quibbler', 'The Times'],
             correctAnswer: 'The Daily Prophet',
           },
           {
-            id: 262,
-            category: 'Music',
+            category: 'Movies & TV',
             level: 'Medium',
             text: 'Who directed the 1994 film "Pulp Fiction"?',
             options: ['Steven Spielberg', 'Martin Scorsese', 'Quentin Tarantino', 'Christopher Nolan'],
             correctAnswer: 'Quentin Tarantino',
           },
           {
-            id: 263,
-            category: 'Music',
+            category: 'Movies & TV',
             level: 'Medium',
             text: 'In the film "The Matrix," what is the real name of the character Neo?',
             options: ['John Anderson', 'Thomas Anderson', 'Jack Thompson', 'Michael Williams'],
             correctAnswer: 'Thomas Anderson',
           },
           {
-            id: 264,
-            category: 'Music',
-            level: 'Hard',
+            category: 'Pop Culture',
+            level: 'Easy',
             text: 'Who wrote the play "Romeo and Juliet"?',
             options: ['Charles Dickens', 'William Shakespeare', 'Jane Austen', 'Mark Twain'],
             correctAnswer: 'William Shakespeare',
           },
           {
-            id: 265,
-            category: 'Music',
-            level: 'Hard',
+            category: 'Movies & TV',
+            level: 'Medium',
             text: 'What is the name of the fictional wizarding sport played on broomsticks in Harry Potter?',
             options: ['Broom Ball', 'Quidditch', 'Witchball', 'Magic Soccer'],
             correctAnswer: 'Quidditch',
           },
           {
-            id: 266,
-            category: 'Music',
-            level: 'Hard',
+            category: 'Pop Culture',
+            level: 'Easy',
             text: 'What is the name of the fictional wizarding school in the "Harry Potter" series?',
             options: ['Hogwarts', 'Beauxbatons', 'Durmstrang', 'Ilvermorny'],
             correctAnswer: 'Hogwarts',
           },
           {
-            id: 267,
-            category: 'Music',
-            level: 'Hard',
-            text: 'Which animated film features a character named Elsa with ice powers?',
-            options: ['Moana', 'Frozen', 'Tangled', 'Brave'],
-            correctAnswer: 'Frozen',
-          },
-          {
-            id: 268,
-            category: 'Music',
-            level: 'Hard',
-            text: 'Which actor played the character Tony Stark/Iron Man in the Marvel Cinematic Universe?',
-            options: ['Chris Evans', 'Robert Downey Jr.', 'Chris Hemsworth', 'Mark Ruffalo'],
-            correctAnswer: 'Robert Downey Jr.',
-          },
-          {
-            id: 269,
-            category: 'Music',
-            level: 'Hard',
-            text: 'In the TV series "Breaking Bad," what is the street name of Walter White’s blue meth?',
-            options: ['Blue Ice', 'Crystal Clear', 'Blue Sky', 'Meth Blue'],
-            correctAnswer: 'Blue Sky',
-          },
-          {
-            id: 270,
-            category: 'Music',
-            level: 'Hard',
-            text: 'Who wrote the dystopian novel "1984"?',
-            options: ['Aldous Huxley', 'Ray Bradbury', 'George Orwell', 'H.G. Wells'],
-            correctAnswer: 'George Orwell',
-          },
-          {
-            id: 271,
-            category: 'Music',
-            level: 'Hard',
-            text: 'Which character says the famous line "Here’s looking at you, kid" in the film "Casablanca"?',
-            options: ['Humphrey Bogart', 'Ingrid Bergman', 'Claude Rains', 'Paul Henreid'],
-            correctAnswer: 'Humphrey Bogart',
-          },
-          {
-            id: 272,
             category: 'General Trivia',
             level: 'Easy',
             text: 'Which planet is known as the Red Planet?',
@@ -2078,7 +1785,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Mars',
           },
           {
-            id: 273,
             category: 'General Trivia',
             level: 'Easy',
             text: 'What is the powerhouse of the cell?',
@@ -2086,7 +1792,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Mitochondria',
           },
           {
-            id: 274,
             category: 'General Trivia',
             level: 'Easy',
             text: 'What is the largest mammal on Earth?',
@@ -2094,7 +1799,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Blue whale',
           },
           {
-            id: 275,
             category: 'General Trivia',
             level: 'Easy',
             text: 'Which gas do plants absorb from the atmosphere?',
@@ -2102,7 +1806,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Carbon dioxide',
           },
           {
-            id: 276,
             category: 'General Trivia',
             level: 'Easy',
             text: 'What is the Earth’s primary source of energy?',
@@ -2110,7 +1813,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Sun',
           },
           {
-            id: 277,
             category: 'General Trivia',
             level: 'Easy',
             text: 'What is the smallest bone in the human body?',
@@ -2118,7 +1820,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Cochlea',
           },
           {
-            id: 278,
             category: 'General Trivia',
             level: 'Easy',
             text: 'Which gas do plants release during photosynthesis?',
@@ -2126,7 +1827,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Oxygen',
           },
           {
-            id: 279,
             category: 'General Trivia',
             level: 'Easy',
             text: 'What is the freezing point of water in Celsius?',
@@ -2134,7 +1834,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: '0°C',
           },
           {
-            id: 280,
             category: 'General Trivia',
             level: 'Medium',
             text: 'Which element is essential for the formation of bones in the human body?',
@@ -2142,7 +1841,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Calcium',
           },
           {
-            id: 281,
             category: 'General Trivia',
             level: 'Medium',
             text: 'What is the process by which plants make their own food?',
@@ -2150,7 +1848,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Photosynthesis',
           },
           {
-            id: 282,
             category: 'General Trivia',
             level: 'Medium',
             text: 'What is the temperature at which all molecular motion ceases?',
@@ -2158,7 +1855,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: '-273.15°C',
           },
           {
-            id: 283,
             category: 'General Trivia',
             level: 'Medium',
             text: 'Who developed the theory of general relativity?',
@@ -2166,7 +1862,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Albert Einstein',
           },
           {
-            id: 284,
             category: 'General Trivia',
             level: 'Medium',
             text: 'What is the unit of electrical resistance?',
@@ -2174,7 +1869,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Ohm',
           },
           {
-            id: 285,
             category: 'General Trivia',
             level: 'Medium',
             text: 'Which gas makes up the majority of the Earth\'s atmosphere?',
@@ -2182,7 +1876,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Nitrogen',
           },
           {
-            id: 286,
             category: 'General Trivia',
             level: 'Medium',
             text: 'Which force holds the nucleus of an atom together?',
@@ -2190,7 +1883,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Nuclear force',
           },
           {
-            id: 287,
             category: 'General Trivia',
             level: 'Medium',
             text: 'What is the largest organ in the human body?',
@@ -2198,7 +1890,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Skin',
           },
           {
-            id: 420,
             category: 'General Trivia',
             level: 'Hard',
             text: 'What is the speed of light in a vacuum?',
@@ -2206,7 +1897,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: '299,792 km/s',
           },
           {
-            id: 421,
             category: 'General Trivia',
             level: 'Hard',
             text: 'In chemistry, what does the term "pH" measure?',
@@ -2214,7 +1904,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Potential of Hydrogen',
           },
           {
-            id: 422,
             category: 'General Trivia',
             level: 'Hard',
             text: 'What is the smallest particle of an element that retains its chemical properties?',
@@ -2222,7 +1911,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Atom',
           },
           {
-            id: 423,
             category: 'General Trivia',
             level: 'Hard',
             text: 'Who developed the theory of general relativity?',
@@ -2230,7 +1918,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Albert Einstein',
           },
           {
-            id: 424,
             category: 'General Trivia',
             level: 'Hard',
             text: 'What is the unit of electrical resistance?',
@@ -2238,7 +1925,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Ohm',
           },
           {
-            id: 425,
             category: 'General Trivia',
             level: 'Hard',
             text: 'Which gas makes up the majority of the Earth\'s atmosphere?',
@@ -2246,7 +1932,6 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Nitrogen',
           },
           {
-            id: 426,
             category: 'General Trivia',
             level: 'Hard',
             text: 'What is the process by which a cell divides into two daughter cells?',
@@ -2254,12 +1939,1124 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
             correctAnswer: 'Mitosis',
           },
           {
-            id: 427,
             category: 'General Trivia',
             level: 'Hard',
             text: 'What is the temperature at which all molecular motion ceases?',
             options: ['-273.15°C', '-200°C', '-100°C', '0°C'],
             correctAnswer: '-273.15°C',
+          },
+          {
+          category: 'Music',
+          level: 'Easy',
+          text: 'Which British band performed the hit song "Yellow"?',
+          options: ['The Beatles', 'Coldplay', 'Queen', 'The Rolling Stones'],
+          correctAnswer: 'Coldplay',
+          },
+          {
+          category: 'Music',
+          level: 'Easy',
+          text: 'What instrument does a percussionist primarily play?',
+          options: ['Guitar', 'Drums', 'Violin', 'Piano'],
+          correctAnswer: 'Drums',
+          },
+          {
+          category: 'Music',
+          level: 'Easy',
+          text: 'Which genre is characterized by its roots in African American communities and includes styles like blues and jazz?',
+          options: ['Country', 'Rock', 'Hip Hop', 'R&B'],
+          correctAnswer: 'R&B',
+          },
+          {
+          category: 'Music',
+          level: 'Easy',
+          text: 'What is the name of Beyoncé and Jay-Zs first child?',
+          options: ['North West', 'Blue Ivy', 'Saint West', 'Apple Martin'],
+          correctAnswer: 'Blue Ivy',
+          },
+          {
+          category: 'Music',
+          level: 'Easy',
+          text: 'What is the name of Taylor Swifts debut album?',
+          options: ['Fearless', 'Red', 'Speak Now', 'Taylor Swift'],
+          correctAnswer: 'Taylor Swift',
+          },
+          {
+          category: 'Music',
+          level: 'Easy',
+          text: 'Which famous rapper is known for albums like "The Slim Shady LP" and "The Marshall Mathers LP"?',
+          options: ['Kanye West', 'Jay-Z', 'Eminem', 'Drake'],
+          correctAnswer: 'Eminem',
+          },
+          {
+          category: 'Music',
+          level: 'Easy',
+          text: 'What is the most widely used instrument in Indian classical music?',
+          options: ['Sitar', 'Tabla', 'Flute', 'Veena'],
+          correctAnswer: 'Sitar',
+          },
+          {
+          category: 'Music',
+          level: 'Easy',
+          text: 'Which Beatles album features the iconic cover with the band walking across a zebra crossing?',
+          options: ['Abbey Road', 'Sgt. Peppers Lonely Hearts Club Band', 'Revolver', 'The White Album'],
+          correctAnswer: 'Abbey Road',
+          },
+          {
+          category: 'Music',
+          level: 'Easy',
+          text: 'Who is known as the "Queen of Soul"?',
+          options: ['Diana Ross', 'Aretha Franklin', 'Whitney Houston', 'Tina Turner'],
+          correctAnswer: 'Aretha Franklin',
+          },
+          {
+          category: 'Music',
+          level: 'Easy',
+          text: 'In which country did the musical genre reggae originate?',
+          options: ['Jamaica', 'Brazil', 'Nigeria', 'Cuba'],
+          correctAnswer: 'Jamaica',
+          },
+          {
+          category: 'Music',
+          level: 'Easy',
+          text: 'What is the title of Elvis Presleys best-selling solo album?',
+          options: ['Love Me Tender', 'Blue Hawaii', 'Elvis Presley', 'The King'],
+          correctAnswer: 'Elvis Presley',
+          },
+          {
+          category: 'Music',
+          level: 'Easy',
+          text: 'Which legendary guitarist is known for his work with the bands Cream and The Yardbirds?',
+          options: ['Eric Clapton', 'Jimi Hendrix', 'Jimmy Page', 'Keith Richards'],
+          correctAnswer: 'Eric Clapton',
+          },
+          {
+          category: 'Music',
+          level: 'Easy',
+          text: 'What is the name of Adeles breakthrough album, released in 2011?',
+          options: ['25', '21', '19', 'Hello'],
+          correctAnswer: '21',
+          },
+          {
+          category: 'Music',
+          level: 'Easy',
+          text: 'Which boy band was formed in 1993 and became known as the "Biggest Boy Band in the World"?',
+          options: ['Backstreet Boys', 'NSYNC', 'New Kids on the Block', 'Take That'],
+          correctAnswer: 'Backstreet Boys',
+          },
+          {
+          category: 'Music',
+          level: 'Easy',
+          text: 'What is the name of the electronic dance music festival held annually in Belgium?',
+          options: ['Tomorrowland', 'Ultra Music Festival', 'Coachella', 'Electric Daisy Carnival'],
+          correctAnswer: 'Tomorrowland',
+          },
+          {
+          category: 'Music',
+          level: 'Easy',
+          text: 'Which singer-songwriter is known for hits like "Firework" and "Teenage Dream"?',
+          options: ['Katy Perry', 'Lady Gaga', 'Rihanna', 'Adele'],
+          correctAnswer: 'Katy Perry',
+          },
+          {
+          category: 'Music',
+          level: 'Easy',
+          text: 'What is the name of the lead singer of the rock band U2?',
+          options: ['Bono', 'Chris Martin', 'Mick Jagger', 'Bruce Springsteen'],
+          correctAnswer: 'Bono',
+          },
+          {
+          category: 'Music',
+          level: 'Easy',
+          text: 'Which music streaming service is known for its playlists curated by user preferences and algorithms?',
+          options: ['Spotify', 'Apple Music', 'Amazon Music', 'Tidal'],
+          correctAnswer: 'Spotify',
+          },
+          {
+          category: 'Music',
+          level: 'Easy',
+          text: 'What is the nickname of the famous jazz trumpeter and vocalist Louis Armstrong?',
+          options: ['Satchmo', 'Dizzy', 'Bird', 'Trane'],
+          correctAnswer: 'Satchmo',
+          },
+          {
+          category: 'Music',
+          level: 'Easy',
+          text: 'Which American singer is known as the "Material Girl"?',
+          options: ['Madonna', 'Lady Gaga', 'Britney Spears', 'Celine Dion'],
+          correctAnswer: 'Madonna',
+          },
+          {
+          category: 'Music',
+          level: 'Easy',
+          text: 'What is the primary instrument played by Kenny G, a famous American saxophonist?',
+          options: ['Flute', 'Clarinet', 'Saxophone', 'Trumpet'],
+          correctAnswer: 'Saxophone',
+          },
+          {
+          category: 'Music',
+          level: 'Easy',
+          text: 'Which famous singer is often referred to as the "Queen of Pop"?',
+          options: ['Beyoncé', 'Madonna', 'Lady Gaga', 'Rihanna'],
+          correctAnswer: 'Madonna',
+          },
+          {
+          category: 'Music',
+          level: 'Easy',
+          text: 'What is the title of Ed Sheerans debut studio album?',
+          options: ['X', '+', '÷', 'Minus'],
+          correctAnswer: '+',
+          },
+          {
+          category: 'Music',
+          level: 'Easy',
+          text: 'Who is known for his iconic hit "Purple Haze" and is considered one of the greatest guitarists of all time?',
+          options: ['Jimi Hendrix', 'Eric Clapton', 'Jimmy Page', 'Carlos Santana'],
+          correctAnswer: 'Jimi Hendrix',
+          },
+          {
+          category: 'Music',
+          level: 'Easy',
+          text: 'Which famous pop singer is also known as the "Material Girl"?',
+          options: ['Britney Spears', 'Celine Dion', 'Madonna', 'Taylor Swift'],
+          correctAnswer: 'Madonna',
+          },
+          {
+          category: 'Music',
+          level: 'Easy',
+          text: 'Who is the lead vocalist of the rock band Aerosmith?',
+          options: ['Steven Tyler', 'Mick Jagger', 'Freddie Mercury', 'Axl Rose'],
+          correctAnswer: 'Steven Tyler',
+          },
+          {
+          category: 'Music',
+          level: 'Easy',
+          text: 'What is the name of the Swedish pop group that gained worldwide fame in the 1970s with hits like "Dancing Queen"?',
+          options: ['ABBA', 'The Beatles', 'The Rolling Stones', 'The Beach Boys'],
+          correctAnswer: 'ABBA',
+          },
+          {
+          category: 'Music',
+          level: 'Easy',
+          text: 'Which country music icon is known for hits like "Ring of Fire" and "I Walk the Line"?',
+          options: ['Johnny Cash', 'Willie Nelson', 'Hank Williams', 'Merle Haggard'],
+          correctAnswer: 'Johnny Cash',
+          },
+          {
+          category: 'Music',
+          level: 'Easy',
+          text: 'What is the title of Billie Eilishs debut studio album?',
+          options: ['When We All Fall Asleep, Where Do We Go?', 'Happier Than Ever', 'Dont Smile at Me', 'Ocean Eyes'],
+          correctAnswer: 'When We All Fall Asleep, Where Do We Go?',
+          },
+          {
+          category: 'Music',
+          level: 'Easy',
+          text: 'Which iconic rock band is known for albums like "The Dark Side of the Moon" and "The Wall"?',
+          options: ['The Rolling Stones', 'Led Zeppelin', 'The Who', 'Pink Floyd'],
+          correctAnswer: 'Pink Floyd',
+          },
+          {
+          category: 'Music',
+          level: 'Medium',
+          text: 'What is the real name of the rapper Eminem?',
+          options: ['Marshall Mathers', 'Calvin Broadus', 'Shawn Carter', 'Onika Maraj'],
+          correctAnswer: 'Marshall Mathers',
+          },
+          {
+          category: 'Music',
+          level: 'Medium',
+          text: 'Which classical composer is known as the "Ludwig van"?',
+          options: ['Mozart', 'Beethoven', 'Bach', 'Chopin'],
+          correctAnswer: 'Beethoven',
+          },
+          {
+          category: 'Music',
+          level: 'Medium',
+          text: 'What is the title of the first studio album released by The Beatles?',
+          options: ['Abbey Road', 'Help!', 'Please Please Me', 'Rubber Soul'],
+          correctAnswer: 'Please Please Me',
+          },
+          {
+          category: 'Music',
+          level: 'Medium',
+          text: 'Who composed the famous ballet "Swan Lake"?',
+          options: ['Tchaikovsky', 'Bach', 'Beethoven', 'Mozart'],
+          correctAnswer: 'Tchaikovsky',
+          },
+          {
+          category: 'Music',
+          level: 'Medium',
+          text: 'What is the name of the American folk singer who gained fame for songs like "Blowin in the Wind"?',
+          options: ['Bob Marley', 'Johnny Cash', 'Woody Guthrie', 'Bob Dylan'],
+          correctAnswer: 'Bob Dylan',
+          },
+          {
+          category: 'Music',
+          level: 'Medium',
+          text: 'In which year did Michael Jackson release his iconic album "Thriller"?',
+          options: ['1982', '1984', '1986', '1988'],
+          correctAnswer: '1982',
+          },
+          {
+          category: 'Music',
+          level: 'Medium',
+          text: 'Which composer is known for his "Four Seasons" concertos?',
+          options: ['Mozart', 'Vivaldi', 'Bach', 'Handel'],
+          correctAnswer: 'Vivaldi',
+          },
+          {
+          category: 'Music',
+          level: 'Medium',
+          text: 'What is the name of the lead guitarist for the rock band Queen?',
+          options: ['Brian May', 'Jimmy Page', 'David Gilmour', 'Angus Young'],
+          correctAnswer: 'Brian May',
+          },
+          {
+          category: 'Music',
+          level: 'Medium',
+          text: 'Which jazz trumpeter is often credited with helping to shape the cool jazz subgenre?',
+          options: ['Miles Davis', 'Louis Armstrong', 'Dizzy Gillespie', 'Chet Baker'],
+          correctAnswer: 'Miles Davis',
+          },
+          {
+          category: 'Music',
+          level: 'Medium',
+          text: 'What is the stage name of the Canadian singer, songwriter, and rapper born Aubrey Graham?',
+          options: ['Drake', 'Kanye West', 'Travis Scott', 'The Weeknd'],
+          correctAnswer: 'Drake',
+          },
+          {
+          category: 'Music',
+          level: 'Medium',
+          text: 'Which legendary guitarist is known for his iconic performance of "The Star-Spangled Banner" at Woodstock in 1969?',
+          options: ['Eric Clapton', 'Jimi Hendrix', 'Jimmy Page', 'Carlos Santana'],
+          correctAnswer: 'Jimi Hendrix',
+          },
+          {
+          category: 'Music',
+          level: 'Medium',
+          text: 'What is the title of the soundtrack composed by Hans Zimmer for the 1994 film "The Lion King"?',
+          options: ['The Circle of Life', 'Hakuna Matata', 'Can You Feel the Love Tonight', 'Be Prepared'],
+          correctAnswer: 'The Circle of Life',
+          },
+          {
+          category: 'Music',
+          level: 'Medium',
+          text: 'Who is often credited with pioneering the electronic music genre with his album "Autobahn"?',
+          options: ['David Bowie', 'Kraftwerk', 'Brian Eno', 'Jean-Michel Jarre'],
+          correctAnswer: 'Kraftwerk',
+          },
+          {
+          category: 'Music',
+          level: 'Medium',
+          text: 'What is the name of the American rock band known for hits like "Stairway to Heaven" and "Whole Lotta Love"?',
+          options: ['Led Zeppelin', 'The Rolling Stones', 'The Who', 'Pink Floyd'],
+          correctAnswer: 'Led Zeppelin',
+          },
+          {
+          category: 'Music',
+          level: 'Medium',
+          text: 'Which famous pianist and composer is known for his solo piano compositions and film scores, including "The Piano"?',
+          options: ['Ludovico Einaudi', 'Philip Glass', 'Hans Zimmer', 'Michael Nyman'],
+          correctAnswer: 'Michael Nyman',
+          },
+          {
+          category: 'Music',
+          level: 'Medium',
+          text: 'What is the name of the lead singer of the rock band Guns N Roses?',
+          options: ['Axl Rose', 'Bruce Springsteen', 'Mick Jagger', 'Steven Tyler'],
+          correctAnswer: 'Axl Rose',
+          },
+          {
+          category: 'Music',
+          level: 'Medium',
+          text: 'Who composed the famous opera "The Marriage of Figaro"?',
+          options: ['Mozart', 'Verdi', 'Puccini', 'Rossini'],
+          correctAnswer: 'Mozart',
+          },
+          {
+          category: 'Music',
+          level: 'Medium',
+          text: 'What is the title of the 1983 album by Michael Jackson that became the best-selling album of all time?',
+          options: ['Bad', 'Dangerous', 'Off the Wall', 'Thriller'],
+          correctAnswer: 'Thriller',
+          },
+          {
+          category: 'Music',
+          level: 'Medium',
+          text: 'Which British rock band released the album "The Wall"?',
+          options: ['The Rolling Stones', 'The Who', 'Pink Floyd', 'Led Zeppelin'],
+          correctAnswer: 'Pink Floyd',
+          },
+          {
+          category: 'Music',
+          level: 'Medium',
+          text: 'Who is often referred to as the "Father of the Blues"?',
+          options: ['B.B. King', 'Robert Johnson', 'Muddy Waters', 'W.C. Handy'],
+          correctAnswer: 'W.C. Handy',
+          },
+          {
+          category: 'Music',
+          level: 'Medium',
+          text: 'Which female artist released the album "Back to Black," featuring hits like "Rehab" and "You Know Im No Good"?',
+          options: ['Adele', 'Amy Winehouse', 'Lana Del Rey', 'Florence Welch'],
+          correctAnswer: 'Amy Winehouse',
+          },
+          {
+          category: 'Music',
+          level: 'Medium',
+          text: 'In which decade did the musical genre known as grunge emerge, with bands like Nirvana and Pearl Jam gaining popularity?',
+          options: ['1980s', '1990s', '2000s', '1970s'],
+          correctAnswer: '1990s',
+          },
+          {
+          category: 'Music',
+          level: 'Medium',
+          text: 'What is the name of the iconic record label founded by Berry Gordy Jr. in 1959, known for its contributions to Motown music?',
+          options: ['Atlantic Records', 'Stax Records', 'Motown Records', 'Capitol Records'],
+          correctAnswer: 'Motown Records',
+          },
+          {
+          category: 'Music',
+          level: 'Medium',
+          text: 'Which famous composer is known for his "Moonlight Sonata" and "Symphony No. 9"?',
+          options: ['Mozart', 'Beethoven', 'Chopin', 'Bach'],
+          correctAnswer: 'Beethoven',
+          },
+          {
+          category: 'Music',
+          level: 'Medium',
+          text: 'Who was known as the "Queen of Disco" and achieved fame with hits like "I Will Survive"?',
+          options: ['Gloria Gaynor', 'Donna Summer', 'Diana Ross', 'Cher'],
+          correctAnswer: 'Donna Summer',
+          },
+          {
+          category: 'Music',
+          level: 'Medium',
+          text: 'What is the title of the first studio album released by Elvis Presley?',
+          options: ['Elvis', 'Blue Hawaii', 'Love Me Tender', 'Elvis Presley'],
+          correctAnswer: 'Elvis Presley',
+          },
+          {
+          category: 'Music',
+          level: 'Medium',
+          text: 'Which composer is known for his "Rhapsody in Blue" and "An American in Paris"?',
+          options: ['Aaron Copland', 'George Gershwin', 'Leonard Bernstein', 'Igor Stravinsky'],
+          correctAnswer: 'George Gershwin',
+          },
+          {
+          category: 'Music',
+          level: 'Medium',
+          text: 'Who is the lead vocalist of the alternative rock band Radiohead?',
+          options: ['Thom Yorke', 'Eddie Vedder', 'Chris Martin', 'Dave Grohl'],
+          correctAnswer: 'Thom Yorke',
+          },
+          {
+          category: 'Music',
+          level: 'Medium',
+          text: 'What is the name of the famous opera by Giuseppe Verdi that tells the story of a hunchbacked court jester?',
+          options: ['La Traviata', 'Rigoletto', 'Aida', 'Carmen'],
+          correctAnswer: 'Rigoletto',
+          },
+          {
+          category: 'Music',
+          level: 'Hard',
+          text: 'Which Russian composer is known for his ballets "Swan Lake," "The Nutcracker," and "The Sleeping Beauty"?',
+          options: ['Sergei Rachmaninoff', 'Dmitri Shostakovich', 'Igor Stravinsky', 'Pyotr Ilyich Tchaikovsky'],
+          correctAnswer: 'Pyotr Ilyich Tchaikovsky',
+          },
+          {
+          category: 'Music',
+          level: 'Hard',
+          text: 'Who is considered the "father of the symphony" and "father of the string quartet"?',
+          options: ['Wolfgang Amadeus Mozart', 'Ludwig van Beethoven', 'Joseph Haydn', 'Johann Sebastian Bach'],
+          correctAnswer: 'Joseph Haydn',
+          },
+          {
+          category: 'Music',
+          level: 'Hard',
+          text: 'What is the name of the influential American composer known for his avant-garde works like "HPSCHD"?',
+          options: ['John Adams', 'Philip Glass', 'John Cage', 'Steve Reich'],
+          correctAnswer: 'John Cage',
+          },
+          {
+          category: 'Music',
+          level: 'Hard',
+          text: 'Which Baroque composer is known for his compositions "The Four Seasons" and "Gloria"?',
+          options: ['George Frideric Handel', 'Antonio Vivaldi', 'Johann Sebastian Bach', 'Henry Purcell'],
+          correctAnswer: 'Antonio Vivaldi',
+          },
+          {
+          category: 'Music',
+          level: 'Hard',
+          text: 'Who is the composer of the opera "The Marriage of Figaro," known for its intricate and lively overture?',
+          options: ['Wolfgang Amadeus Mozart', 'Giuseppe Verdi', 'Richard Wagner', 'Georges Bizet'],
+          correctAnswer: 'Wolfgang Amadeus Mozart',
+          },
+          {
+          category: 'Music',
+          level: 'Hard',
+          text: 'What is the title of the groundbreaking album released by The Velvet Underground in 1967?',
+          options: ['White Light/White Heat', 'The Velvet Underground & Nico', 'Loaded', 'The Velvet Underground'],
+          correctAnswer: 'The Velvet Underground & Nico',
+          },
+          {
+          category: 'Music',
+          level: 'Hard',
+          text: 'Which Italian composer is known for his operas "La Bohème" and "Tosca"?',
+          options: ['Giacomo Puccini', 'Gioachino Rossini', 'Giuseppe Verdi', 'Ludovico Einaudi'],
+          correctAnswer: 'Giacomo Puccini',
+          },
+          {
+          category: 'Music',
+          level: 'Hard',
+          text: 'Who is often called the "Architect of Rock and Roll" and is known for hits like "Johnny B. Goode"?',
+          options: ['Little Richard', 'Fats Domino', 'Chuck Berry', 'Bo Diddley'],
+          correctAnswer: 'Chuck Berry',
+          },
+          {
+          category: 'Music',
+          level: 'Hard',
+          text: 'Which composer is known for his "Ode to Joy," featured in the final movement of his Ninth Symphony?',
+          options: ['Wolfgang Amadeus Mozart', 'Ludwig van Beethoven', 'Johannes Brahms', 'Franz Schubert'],
+          correctAnswer: 'Ludwig van Beethoven',
+          },
+          {
+          category: 'Music',
+          level: 'Hard',
+          text: 'What is the name of the traditional Japanese stringed instrument often associated with classical music?',
+          options: ['Koto', 'Shamisen', 'Biwa', 'Shakuhachi'],
+          correctAnswer: 'Koto',
+          },
+          {
+          category: 'Music',
+          level: 'Hard',
+          text: 'Who is known for his minimalist compositions, including "Music for 18 Musicians" and "Einstein on the Beach"?',
+          options: ['Steve Reich', 'John Adams', 'Philip Glass', 'Terry Riley'],
+          correctAnswer: 'Steve Reich',
+          },
+          {
+          category: 'Music',
+          level: 'Hard',
+          text: 'What is the term for the musical technique where a performer imitates the sound of another instrument or natural sound?',
+          options: ['Adagio', 'Staccato', 'Pizzicato', 'Mimicry'],
+          correctAnswer: 'Mimicry',
+          },
+          {
+          category: 'Music',
+          level: 'Hard',
+          text: 'Who is known for his contributions to the development of the symphony and string quartet?',
+          options: ['Wolfgang Amadeus Mozart', 'Ludwig van Beethoven', 'Joseph Haydn', 'Franz Schubert'],
+          correctAnswer: 'Joseph Haydn',
+          },
+          {
+          category: 'Music',
+          level: 'Hard',
+          text: 'Which composer is associated with the Romantic period and is known for his works like "Symphony Fantastique"?',
+          options: ['Claude Debussy', 'Hector Berlioz', 'Camille Saint-Saëns', 'Maurice Ravel'],
+          correctAnswer: 'Hector Berlioz',
+          },
+          {
+          category: 'Music',
+          level: 'Hard',
+          text: 'What is the name of the ancient Greek musical instrument, considered the precursor to the modern guitar?',
+          options: ['Lyre', 'Pan flute', 'Sistrum', 'Aulos'],
+          correctAnswer: 'Lyre',
+          },
+          {
+          category: 'Music',
+          level: 'Hard',
+          text: 'Which American composer is known for his works like "Rhapsody in Blue" and "An American in Paris"?',
+          options: ['Aaron Copland', 'John Williams', 'George Gershwin', 'Leonard Bernstein'],
+          correctAnswer: 'George Gershwin',
+          },
+          {
+          category: 'Music',
+          level: 'Hard',
+          text: 'Who composed the opera "Carmen," known for its famous aria "Habanera"?',
+          options: ['Georges Bizet', 'Giuseppe Verdi', 'Richard Wagner', 'Giacomo Puccini'],
+          correctAnswer: 'Georges Bizet',
+          },
+          {
+          category: 'Music',
+          level: 'Hard',
+          text: 'What is the term for a composition for three voices or instruments?',
+          options: ['Trio', 'Quartet', 'Sextet', 'Octet'],
+          correctAnswer: 'Trio',
+          },
+          {
+          category: 'Music',
+          level: 'Hard',
+          text: 'Who is known as the "Waltz King" and composed famous waltzes like "The Blue Danube"?',
+          options: ['Franz Schubert', 'Johann Strauss II', 'Richard Strauss', 'Johannes Brahms'],
+          correctAnswer: 'Johann Strauss II',
+          },
+          {
+          category: 'Music',
+          level: 'Hard',
+          text: 'Which composer is known for his "Moonlight Sonata" and "Symphony No. 5"?',
+          options: ['Franz Schubert', 'Johannes Brahms', 'Ludwig van Beethoven', 'Antonín Dvořák'],
+          correctAnswer: 'Ludwig van Beethoven',
+          },
+          {
+          category: 'Music',
+          level: 'Hard',
+          text: 'Who is considered the "King of Ragtime" and composed the famous piano piece "The Entertainer"?',
+          options: ['Scott Joplin', 'Louis Armstrong', 'Jelly Roll Morton', 'Duke Ellington'],
+          correctAnswer: 'Scott Joplin',
+          },
+          {
+          category: 'Music',
+          level: 'Hard',
+          text: 'What is the term for a vocal composition with instrumental accompaniment, typically in several movements?',
+          options: ['Sonata', 'Concerto', 'Symphony', 'Oratorio'],
+          correctAnswer: 'Oratorio',
+          },
+          {
+          category: 'Music',
+          level: 'Hard',
+          text: 'Who is known as the "Father of the Symphony" and composed the famous "Jupiter Symphony"?',
+          options: ['Wolfgang Amadeus Mozart', 'Ludwig van Beethoven', 'Franz Joseph Haydn', 'Johann Sebastian Bach'],
+          correctAnswer: 'Franz Joseph Haydn',
+          },
+          {
+          category: 'Music',
+          level: 'Hard',
+          text: 'Which composer is known for his "Brandenburg Concertos" and the "Well-Tempered Clavier"?',
+          options: ['Johann Sebastian Bach', 'Antonio Vivaldi', 'George Frideric Handel', 'Claudio Monteverdi'],
+          correctAnswer: 'Johann Sebastian Bach',
+          },
+          {
+          category: 'Music',
+          level: 'Hard',
+          text: 'Who composed the opera "La Traviata" and "Rigoletto"?',
+          options: ['Giuseppe Verdi', 'Gioachino Rossini', 'Gaetano Donizetti', 'Vincenzo Bellini'],
+          correctAnswer: 'Giuseppe Verdi',
+          },
+          {
+          category: 'Music',
+          level: 'Hard',
+          text: 'What is the term for a gradual increase in loudness in a piece of music?',
+          options: ['Crescendo', 'Decrescendo', 'Staccato', 'Legato'],
+          correctAnswer: 'Crescendo',
+          },
+          {
+          category: 'Music',
+          level: 'Hard',
+          text: 'Who composed the ballets "The Firebird," "Petrushka," and "The Rite of Spring"?',
+          options: ['Claude Debussy', 'Igor Stravinsky', 'Maurice Ravel', 'Sergei Prokofiev'],
+          correctAnswer: 'Igor Stravinsky',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Easy',
+          text: 'Who played the character John McClane in the action film "Die Hard"?',
+          options: ['Arnold Schwarzenegger', 'Sylvester Stallone', 'Bruce Willis', 'Mel Gibson'],
+          correctAnswer: 'Bruce Willis',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Easy',
+          text: 'In the animated film "Toy Story," what is the name of the space ranger action figure?',
+          options: ['Buzz Lightyear', 'Woody', 'Slinky Dog', 'Mr. Potato Head'],
+          correctAnswer: 'Buzz Lightyear',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Easy',
+          text: 'Who directed the fantasy film "The Lord of the Rings: The Fellowship of the Ring"?',
+          options: ['Christopher Nolan', 'Peter Jackson', 'Steven Spielberg', 'James Cameron'],
+          correctAnswer: 'Peter Jackson',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Easy',
+          text: 'Which actress played the role of Elle Woods in the comedy film "Legally Blonde"?',
+          options: ['Reese Witherspoon', 'Cameron Diaz', 'Julia Roberts', 'Jennifer Aniston'],
+          correctAnswer: 'Reese Witherspoon',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Easy',
+          text: 'What is the name of the fictional wizarding school in the "Fantastic Beasts" film series?',
+          options: ['Hogwarts School of Witchcraft and Wizardry', 'Ilvermorny School of Witchcraft and Wizardry', 'Beauxbatons Academy of Magic', 'Durmstrang Institute'],
+          correctAnswer: 'Ilvermorny School of Witchcraft and Wizardry',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Easy',
+          text: 'Who played the character Jack Dawson in the romantic drama film "Titanic"?',
+          options: ['Leonardo DiCaprio', 'Tom Cruise', 'Brad Pitt', 'Johnny Depp'],
+          correctAnswer: 'Leonardo DiCaprio',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Easy',
+          text: 'Which actor is known for his role as Captain Jack Sparrow in the "Pirates of the Caribbean" film series?',
+          options: ['Orlando Bloom', 'Johnny Depp', 'Geoffrey Rush', 'Javier Bardem'],
+          correctAnswer: 'Johnny Depp',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Easy',
+          text: 'In the animated film "Shrek," who voices the character Donkey?',
+          options: ['Mike Myers', 'Eddie Murphy', 'Cameron Diaz', 'Antonio Banderas'],
+          correctAnswer: 'Eddie Murphy',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Easy',
+          text: 'Who directed the science fiction film "E.T. the Extra-Terrestrial"?',
+          options: ['George Lucas', 'Steven Spielberg', 'James Cameron', 'Christopher Nolan'],
+          correctAnswer: 'Steven Spielberg',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Easy',
+          text: 'Which actress won the Academy Award for Best Actress for her role in "La La Land"?',
+          options: ['Meryl Streep', 'Emma Stone', 'Jennifer Lawrence', 'Natalie Portman'],
+          correctAnswer: 'Emma Stone',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Easy',
+          text: 'Who played the character Maximus Decimus Meridius in the historical drama film "Gladiator"?',
+          options: ['Russell Crowe', 'Joaquin Phoenix', 'Denzel Washington', 'Brad Pitt'],
+          correctAnswer: 'Russell Crowe',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Easy',
+          text: 'In the animated film "Finding Nemo," what type of fish is Nemo?',
+          options: ['Clownfish', 'Angelfish', 'Doryfish', 'Guppy'],
+          correctAnswer: 'Clownfish',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Easy',
+          text: 'Who played the character Jack Dawson in the romantic drama film "Titanic"?',
+          options: ['Leonardo DiCaprio', 'Tom Cruise', 'Brad Pitt', 'Johnny Depp'],
+          correctAnswer: 'Leonardo DiCaprio',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Easy',
+          text: 'Which actor is known for his role as Captain Jack Sparrow in the "Pirates of the Caribbean" film series?',
+          options: ['Orlando Bloom', 'Johnny Depp', 'Geoffrey Rush', 'Javier Bardem'],
+          correctAnswer: 'Johnny Depp',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Easy',
+          text: 'In the animated film "Shrek," who voices the character Donkey?',
+          options: ['Mike Myers', 'Eddie Murphy', 'Cameron Diaz', 'Antonio Banderas'],
+          correctAnswer: 'Eddie Murphy',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Easy',
+          text: 'Who directed the science fiction film "E.T. the Extra-Terrestrial"?',
+          options: ['George Lucas', 'Steven Spielberg', 'James Cameron', 'Christopher Nolan'],
+          correctAnswer: 'Steven Spielberg',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Easy',
+          text: 'Which actress won the Academy Award for Best Actress for her role in "La La Land"?',
+          options: ['Meryl Streep', 'Emma Stone', 'Jennifer Lawrence', 'Natalie Portman'],
+          correctAnswer: 'Emma Stone',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Easy',
+          text: 'Who played the character Maximus Decimus Meridius in the historical drama film "Gladiator"?',
+          options: ['Russell Crowe', 'Joaquin Phoenix', 'Denzel Washington', 'Brad Pitt'],
+          correctAnswer: 'Russell Crowe',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Easy',
+          text: 'In the animated film "Finding Nemo," what type of fish is Nemo?',
+          options: ['Clownfish', 'Angelfish', 'Doryfish', 'Guppy'],
+          correctAnswer: 'Clownfish',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Medium',
+          text: 'Who directed the 1980 film "The Shining," based on Stephen Kings novel?',
+          options: ['Alfred Hitchcock', 'Stanley Kubrick', 'Francis Ford Coppola', 'Martin Scorsese'],
+          correctAnswer: 'Stanley Kubrick',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Medium',
+          text: 'Who played the lead role in the 2013 science fiction film "Gravity"?',
+          options: ['Sandra Bullock', 'Cate Blanchett', 'Julia Roberts', 'Meryl Streep'],
+          correctAnswer: 'Sandra Bullock',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Medium',
+          text: 'In the TV series "Breaking Bad," what is the alias used by the main character, Walter White?',
+          options: ['Heisenberg', 'El Loco', 'The Ghost', 'Mr. Blue'],
+          correctAnswer: 'Heisenberg',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Medium',
+          text: 'Who directed the 1999 film "American Beauty," which won the Academy Award for Best Picture?',
+          options: ['Sam Mendes', 'Quentin Tarantino', 'Christopher Nolan', 'David Fincher'],
+          correctAnswer: 'Sam Mendes',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Medium',
+          text: 'In the TV series "Stranger Things," what is the name of the parallel dimension inhabited by the Demogorgon?',
+          options: ['The Netherworld', 'The Abyss', 'The Underworld', 'The Upside Down'],
+          correctAnswer: 'The Upside Down',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Medium',
+          text: 'Who played the character Lisbeth Salander in the film adaptation of Stieg Larssons "The Girl with the Dragon Tattoo"?',
+          options: ['Rooney Mara', 'Scarlett Johansson', 'Charlize Theron', 'Emma Watson'],
+          correctAnswer: 'Rooney Mara',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Medium',
+          text: 'What is the name of the fictional African country in the Marvel Cinematic Universe, home to the superhero Black Panther?',
+          options: ['Wakanda', 'Zamunda', 'Genovia', 'Elbonia'],
+          correctAnswer: 'Wakanda',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Medium',
+          text: 'Who directed the 1977 science fiction film "Star Wars: Episode IV - A New Hope"?',
+          options: ['Steven Spielberg', 'George Lucas', 'James Cameron', 'Ridley Scott'],
+          correctAnswer: 'George Lucas',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Medium',
+          text: 'In the TV series "The Sopranos," what is the name of the mob boss played by James Gandolfini?',
+          options: ['Tony Montana', 'Tony Soprano', 'Tony Corleone', 'Tony Capone'],
+          correctAnswer: 'Tony Soprano',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Medium',
+          text: 'Who played the character Neo in the science fiction film "The Matrix" trilogy?',
+          options: ['Keanu Reeves', 'Hugo Weaving', 'Lawrence Fishburne', 'Carrie-Anne Moss'],
+          correctAnswer: 'Keanu Reeves',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Medium',
+          text: 'In the TV series "Game of Thrones," what is the name of Jon Snows direwolf?',
+          options: ['Ghost', 'Shadow', 'Fang', 'Storm'],
+          correctAnswer: 'Ghost',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Medium',
+          text: 'Who directed the 2001 fantasy film "The Lord of the Rings: The Fellowship of the Ring"?',
+          options: ['Christopher Nolan', 'Peter Jackson', 'Steven Spielberg', 'James Cameron'],
+          correctAnswer: 'Peter Jackson',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Medium',
+          text: 'In the TV series "Stranger Things," what is the name of the parallel dimension inhabited by the Demogorgon?',
+          options: ['The Netherworld', 'The Abyss', 'The Underworld', 'The Upside Down'],
+          correctAnswer: 'The Upside Down',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Medium',
+          text: 'Who played the lead role in the 2013 science fiction film "Gravity"?',
+          options: ['Sandra Bullock', 'Cate Blanchett', 'Julia Roberts', 'Meryl Streep'],
+          correctAnswer: 'Sandra Bullock',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Medium',
+          text: 'In the film "Inception," what is the term used for the act of entering someones dreams within a dream?',
+          options: ['Dreamception', 'Somnambulism', 'Extraction', 'Oneiric Infiltration'],
+          correctAnswer: 'Oneiric Infiltration',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Medium',
+          text: 'Who directed the 1980 film "The Shining," based on Stephen Kings novel?',
+          options: ['Alfred Hitchcock', 'Stanley Kubrick', 'Francis Ford Coppola', 'Martin Scorsese'],
+          correctAnswer: 'Stanley Kubrick',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Medium',
+          text: 'Who played the character Lisbeth Salander in the film adaptation of Stieg Larssons "The Girl with the Dragon Tattoo"?',
+          options: ['Rooney Mara', 'Scarlett Johansson', 'Charlize Theron', 'Emma Watson'],
+          correctAnswer: 'Rooney Mara',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Medium',
+          text: 'In the TV series "Breaking Bad," what is the alias used by the main character, Walter White?',
+          options: ['Heisenberg', 'El Loco', 'The Ghost', 'Mr. Blue'],
+          correctAnswer: 'Heisenberg',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Medium',
+          text: 'Who directed the 1999 film "American Beauty," which won the Academy Award for Best Picture?',
+          options: ['Sam Mendes', 'Quentin Tarantino', 'Christopher Nolan', 'David Fincher'],
+          correctAnswer: 'Sam Mendes',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Medium',
+          text: 'In the TV series "Game of Thrones," what is the name of Jon Snows direwolf?',
+          options: ['Ghost', 'Shadow', 'Fang', 'Storm'],
+          correctAnswer: 'Ghost',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Medium',
+          text: 'Who played the character Neo in the science fiction film "The Matrix" trilogy?',
+          options: ['Keanu Reeves', 'Hugo Weaving', 'Lawrence Fishburne', 'Carrie-Anne Moss'],
+          correctAnswer: 'Keanu Reeves',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Medium',
+          text: 'Who directed the 2001 fantasy film "The Lord of the Rings: The Fellowship of the Ring"?',
+          options: ['Christopher Nolan', 'Peter Jackson', 'Steven Spielberg', 'James Cameron'],
+          correctAnswer: 'Peter Jackson',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Hard',
+          text: 'In the film "Mulholland Drive," directed by David Lynch, what is the significance of the blue box?',
+          options: ['A portal to another dimension', 'A key to a hidden treasure', 'A symbol of lost memories', 'A metaphor for time travel'],
+          correctAnswer: 'A symbol of lost memories',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Hard',
+          text: 'Who directed the 1979 war film "Apocalypse Now," which is loosely based on Joseph Conrads novella "Heart of Darkness"?',
+          options: ['Francis Ford Coppola', 'Stanley Kubrick', 'Oliver Stone', 'Martin Scorsese'],
+          correctAnswer: 'Francis Ford Coppola',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Hard',
+          text: 'In the TV series "Twin Peaks," who killed Laura Palmer?',
+          options: ['Agent Dale Cooper', 'Leland Palmer', 'The Log Lady', 'Bob, the evil spirit'],
+          correctAnswer: 'Leland Palmer',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Hard',
+          text: 'Which actor played the character Tristan Ludlow in the 1994 epic drama film "Legends of the Fall"?',
+          options: ['Brad Pitt', 'Robert Redford', 'Tom Hanks', 'Leonardo DiCaprio'],
+          correctAnswer: 'Brad Pitt',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Hard',
+          text: 'In the film "Blade Runner," what is the term for bioengineered beings virtually identical to humans?',
+          options: ['Synthetics', 'Humanoids', 'Replicants', 'Bioforms'],
+          correctAnswer: 'Replicants',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Hard',
+          text: 'Who directed the 1990 crime film "Goodfellas," based on the life of mobster Henry Hill?',
+          options: ['Martin Scorsese', 'Quentin Tarantino', 'Brian De Palma', 'Francis Ford Coppola'],
+          correctAnswer: 'Martin Scorsese',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Hard',
+          text: 'In the TV series "The Wire," what is the nickname of Omar Little, a notorious and skilled stick-up artist?',
+          options: ['The Ghost', 'The Kingpin', 'The Viper', 'The Robin Hood of Baltimore'],
+          correctAnswer: 'The Robin Hood of Baltimore',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Hard',
+          text: 'Who directed the 1984 science fiction film "Dune," based on Frank Herberts novel?',
+          options: ['David Lynch', 'Ridley Scott', 'George Lucas', 'James Cameron'],
+          correctAnswer: 'David Lynch',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Hard',
+          text: 'In the TV series "The X-Files," what is the name of the secretive government organization that investigates paranormal cases?',
+          options: ['Majestic 12', 'The Consortium', 'The Syndicate', 'X-Factor'],
+          correctAnswer: 'The Syndicate',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Hard',
+          text: 'Who played the character Michael Corleone in the 1972 film "The Godfather"?',
+          options: ['Al Pacino', 'Robert De Niro', 'Marlon Brando', 'James Caan'],
+          correctAnswer: 'Al Pacino',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Hard',
+          text: 'In the film "Eternal Sunshine of the Spotless Mind," who played the character Joel Barish?',
+          options: ['Jim Carrey', 'Elijah Wood', 'Ryan Gosling', 'Joaquin Phoenix'],
+          correctAnswer: 'Jim Carrey',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Hard',
+          text: 'Who directed the 2002 psychological thriller film "Punch-Drunk Love"?',
+          options: ['Quentin Tarantino', 'David Fincher', 'Paul Thomas Anderson', 'Christopher Nolan'],
+          correctAnswer: 'Paul Thomas Anderson',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Hard',
+          text: 'In the TV series "Black Mirror," which episode features a social rating system that impacts a persons life?',
+          options: ['Nosedive', 'White Christmas', 'San Junipero', 'Hang the DJ'],
+          correctAnswer: 'Nosedive',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Hard',
+          text: 'Who played the character Daniel Plainview in the 2007 film "There Will Be Blood"?',
+          options: ['Daniel Day-Lewis', 'Joaquin Phoenix', 'Christian Bale', 'Leonardo DiCaprio'],
+          correctAnswer: 'Daniel Day-Lewis',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Hard',
+          text: 'In the TV series "Lost," what is the mysterious hatch discovered by the survivors called?',
+          options: ['The Swan', 'The Pearl', 'The Orchid', 'The Hydra'],
+          correctAnswer: 'The Swan',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Hard',
+          text: 'Who directed the 1997 science fiction film "Gattaca," set in a future where genetic engineering is common?',
+          options: ['Christopher Nolan', 'Steven Spielberg', 'Andrew Niccol', 'James Cameron'],
+          correctAnswer: 'Andrew Niccol',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Hard',
+          text: 'In the film "Mulholland Drive," directed by David Lynch, what is the significance of the blue box?',
+          options: ['A portal to another dimension', 'A key to a hidden treasure', 'A symbol of lost memories', 'A metaphor for time travel'],
+          correctAnswer: 'A symbol of lost memories',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Hard',
+          text: 'Who directed the 1979 war film "Apocalypse Now," which is loosely based on Joseph Conrads novella "Heart of Darkness"?',
+          options: ['Francis Ford Coppola', 'Stanley Kubrick', 'Oliver Stone', 'Martin Scorsese'],
+          correctAnswer: 'Francis Ford Coppola',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Hard',
+          text: 'In the TV series "Twin Peaks," who killed Laura Palmer?',
+          options: ['Agent Dale Cooper', 'Leland Palmer', 'The Log Lady', 'Bob, the evil spirit'],
+          correctAnswer: 'Leland Palmer',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Hard',
+          text: 'Which actor played the character Tristan Ludlow in the 1994 epic drama film "Legends of the Fall"?',
+          options: ['Brad Pitt', 'Robert Redford', 'Tom Hanks', 'Leonardo DiCaprio'],
+          correctAnswer: 'Brad Pitt',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Hard',
+          text: 'In the film "Blade Runner," what is the term for bioengineered beings virtually identical to humans?',
+          options: ['Synthetics', 'Humanoids', 'Replicants', 'Bioforms'],
+          correctAnswer: 'Replicants',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Hard',
+          text: 'Who directed the 1990 crime film "Goodfellas," based on the life of mobster Henry Hill?',
+          options: ['Martin Scorsese', 'Quentin Tarantino', 'Brian De Palma', 'Francis Ford Coppola'],
+          correctAnswer: 'Martin Scorsese',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Hard',
+          text: 'In the TV series "The Wire," what is the nickname of Omar Little, a notorious and skilled stick-up artist?',
+          options: ['The Ghost', 'The Kingpin', 'The Viper', 'The Robin Hood of Baltimore'],
+          correctAnswer: 'The Robin Hood of Baltimore',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Hard',
+          text: 'Who directed the 1984 science fiction film "Dune," based on Frank Herberts novel?',
+          options: ['David Lynch', 'Ridley Scott', 'George Lucas', 'James Cameron'],
+          correctAnswer: 'David Lynch',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Hard',
+          text: 'In the TV series "The X-Files," what is the name of the secretive government organization that investigates paranormal cases?',
+          options: ['Majestic 12', 'The Consortium', 'The Syndicate', 'X-Factor'],
+          correctAnswer: 'The Syndicate',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Hard',
+          text: 'Who played the character Michael Corleone in the 1972 film "The Godfather"?',
+          options: ['Al Pacino', 'Robert De Niro', 'Marlon Brando', 'James Caan'],
+          correctAnswer: 'Al Pacino',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Hard',
+          text: 'In the film "Eternal Sunshine of the Spotless Mind," who played the character Joel Barish?',
+          options: ['Jim Carrey', 'Elijah Wood', 'Ryan Gosling', 'Joaquin Phoenix'],
+          correctAnswer: 'Jim Carrey',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Hard',
+          text: 'Who directed the 2002 psychological thriller film "Punch-Drunk Love"?',
+          options: ['Quentin Tarantino', 'David Fincher', 'Paul Thomas Anderson', 'Christopher Nolan'],
+          correctAnswer: 'Paul Thomas Anderson',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Hard',
+          text: 'In the TV series "Black Mirror," which episode features a social rating system that impacts a persons life?',
+          options: ['Nosedive', 'White Christmas', 'San Junipero', 'Hang the DJ'],
+          correctAnswer: 'Nosedive',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Hard',
+          text: 'Who played the character Daniel Plainview in the 2007 film "There Will Be Blood"?',
+          options: ['Daniel Day-Lewis', 'Joaquin Phoenix', 'Christian Bale', 'Leonardo DiCaprio'],
+          correctAnswer: 'Daniel Day-Lewis',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Hard',
+          text: 'In the TV series "Lost," what is the mysterious hatch discovered by the survivors called?',
+          options: ['The Swan', 'The Pearl', 'The Orchid', 'The Hydra'],
+          correctAnswer: 'The Swan',
+          },
+          {
+          category: 'Movies & TV',
+          level: 'Hard',
+          text: 'Who directed the 1997 science fiction film "Gattaca," set in a future where genetic engineering is common?',
+          options: ['Christopher Nolan', 'Steven Spielberg', 'Andrew Niccol', 'James Cameron'],
+          correctAnswer: 'Andrew Niccol',
           }
       ];
 
@@ -2333,7 +3130,7 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
                     onClick={() => handleAnswerClick(answers[3])}><b>{answers[3]}</b></text>
                 </div>
                 <div style={{marginTop: "10vh", paddingLeft: "10vh", paddingRight: "10vh"}}>
-                    <div style={{background: "#44d8fc", fontSize: "3vw", color: "black"}} onClick={() => handleSetPage("main")}><b>Main Menu</b></div>
+                    <div style={{background: "#44d8fc", fontSize: "3vw", color: "black"}} onClick={() => { handleSetPage("main"); setCurTeam(1); }}><b>Main Menu</b></div>
                 </div>
             </div>
         </div>

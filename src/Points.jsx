@@ -1,12 +1,8 @@
 import React from "react";
 import "./components/TeamSelection.css";
-import Team1Character from './components/Team1Character.jpg';
-import Team2Character from './components/Team2Character.jpg';
-import Team3Character from './components/Team3Character.jpg';
-import Team4Character from './components/Team4Character.jpg';
-import Team5Character from './components/Team5Character.jpg';
 
-export const Points = ({setCurrentPage, points, status, setCurrentTeam, teams, currentTeam, clickedCategories}) => {
+export const Points = ({setCurrentPage, points, status, setCurrentTeam, teams, currentTeam, clickedCategories, Team1Character, 
+    Team2Character, Team3Character, Team4Character, Team5Character}) => {
     const handleSetPage = (selectedPage) => {
         setCurrentTeam((currentTeam + 1) % teams);
         setCurrentPage(selectedPage);

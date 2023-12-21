@@ -1,11 +1,12 @@
 import React from "react";
 
-export const MainMenu = ({setCurrentPage, setPoints, setCurrentTeam, setClickedCategories}) => {
+export const MainMenu = ({setCurrentPage, setPoints, setCurrentTeam, setClickedCategories, setClickedCharacters}) => {
     const handleSetPage = (selectedPage) => {
         setCurrentPage(selectedPage);
         setCurrentTeam(0);
         setClickedCategories((prevClickedCategories) => new Set());
         handleResetPoints();
+        setClickedCharacters((prevClickedCharacters) => new Set());
     };
 
     const handleResetPoints = () => {

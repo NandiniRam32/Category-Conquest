@@ -1,11 +1,7 @@
 import React from "react";
-import Team1Character from './components/Team1Character.jpg';
-import Team2Character from './components/Team2Character.jpg';
-import Team3Character from './components/Team3Character.jpg';
-import Team4Character from './components/Team4Character.jpg';
-import Team5Character from './components/Team5Character.jpg';
 
-export const Winner = ({setCurrentPage, points}) => {
+export const Winner = ({setCurrentPage, points, setCurTeam, Team1Character, Team2Character, Team3Character, 
+                        Team4Character, Team5Character}) => {
     const handleSetPage = (selectedPage) => {
         setCurrentPage(selectedPage);
     };
@@ -60,7 +56,7 @@ export const Winner = ({setCurrentPage, points}) => {
                             className={winTeam.includes("5") ? '' : 'hidden'}/></span>
                 </div>
                 <div style={{marginTop: "4vh", paddingLeft: "10vh", paddingRight: "10vh"}}>
-                    <div style={{background: "#44d8fc", fontSize: "3vw", color: "black"}} onClick={() => handleSetPage("main")}><b>Main Menu</b></div>
+                    <div style={{background: "#44d8fc", fontSize: "3vw", color: "black"}} onClick={() => { handleSetPage("main"); setCurTeam(1); }}><b>Main Menu</b></div>
                 </div>
             </div>
         </>

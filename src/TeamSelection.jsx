@@ -1,14 +1,14 @@
 import React from "react";
 import "./components/TeamSelection.css";
 
-export const TeamSelection = ({setCurrentPage, setCurrentTeams}) => {
+export const TeamSelection = ({setCurrentPage, setCurrentTeams, setCurTeam}) => {
     const handleSetPage = (selectedPage) => {
         setCurrentPage(selectedPage);
     };
 
     const handleSetTeams = (selectedTeams) => {
         setCurrentTeams(selectedTeams);
-        setCurrentPage("categories");
+        setCurrentPage("characters");
     };
 
     return (
@@ -25,7 +25,7 @@ export const TeamSelection = ({setCurrentPage, setCurrentTeams}) => {
                     <text style={{background: "#44d8fc", marginRight: "6vw"}} className="teamsChoice" onClick={() => handleSetTeams(5)}><b>5 Teams</b></text>
                 </div>
                 <div style={{marginTop: "10vh", paddingLeft: "10vh", paddingRight: "10vh"}}>
-                    <div style={{background: "#44d8fc", fontSize: "3vw", color: "black"}} onClick={() => handleSetPage("main")}><b>Main Menu</b></div>
+                    <div style={{background: "#44d8fc", fontSize: "3vw", color: "black"}} onClick={() => { handleSetPage("main"); setCurTeam(1); }}><b>Main Menu</b></div>
                 </div>
             </div>
         </div>
