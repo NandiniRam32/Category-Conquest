@@ -1998,7 +1998,7 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
           category: 'Music',
           level: 'Easy',
           text: 'Which Beatles album features the iconic cover with the band walking across a zebra crossing?',
-          options: ['Abbey Road', 'Sgt. Peppers Lonely Hearts Club Band', 'Revolver', 'The White Album'],
+          options: ['Abbey Road', 'Sgt. Peppers Club Band', 'Revolver', 'The White Album'],
           correctAnswer: 'Abbey Road',
           },
           {
@@ -2144,9 +2144,9 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
           {
           category: 'Music',
           level: 'Easy',
-          text: 'What is the title of Billie Eilishs debut studio album?',
-          options: ['When We All Fall Asleep, Where Do We Go?', 'Happier Than Ever', 'Dont Smile at Me', 'Ocean Eyes'],
-          correctAnswer: 'When We All Fall Asleep, Where Do We Go?',
+          text: 'What is the title of Billie Eilishs 2nd studio album?',
+          options: ['Where Do We Go?', 'Happier Than Ever', 'Dont Smile at Me', 'Ocean Eyes'],
+          correctAnswer: 'Happier Than Ever',
           },
           {
           category: 'Music',
@@ -2236,7 +2236,7 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
           category: 'Music',
           level: 'Medium',
           text: 'What is the title of the soundtrack composed by Hans Zimmer for the 1994 film "The Lion King"?',
-          options: ['The Circle of Life', 'Hakuna Matata', 'Can You Feel the Love Tonight', 'Be Prepared'],
+          options: ['The Circle of Life', 'Hakuna Matata', 'Can U Feel the Love', 'Be Prepared'],
           correctAnswer: 'The Circle of Life',
           },
           {
@@ -2362,8 +2362,8 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
           category: 'Music',
           level: 'Hard',
           text: 'Which Russian composer is known for his ballets "Swan Lake," "The Nutcracker," and "The Sleeping Beauty"?',
-          options: ['Sergei Rachmaninoff', 'Dmitri Shostakovich', 'Igor Stravinsky', 'Pyotr Ilyich Tchaikovsky'],
-          correctAnswer: 'Pyotr Ilyich Tchaikovsky',
+          options: ['Sergei Rachmaninoff', 'Dmitri Shostakovich', 'Igor Stravinsky', 'Pyotr Tchaikovsky'],
+          correctAnswer: 'Pyotr Tchaikovsky',
           },
           {
           category: 'Music',

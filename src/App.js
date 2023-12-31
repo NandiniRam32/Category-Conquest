@@ -8,6 +8,7 @@ import { Question } from './Question';
 import { Points } from './Points';
 import { Winner } from './Winner';
 import { Characters } from './Characters';
+import { Names } from './Names';
 import cat from './components/cat.jpg';
 import dog from './components/dog.jpg';
 import fox from './components/fox.jpg';
@@ -43,6 +44,11 @@ const App = () => {
   const [Team3Character, setTeam3Character] = useState(fox);
   const [Team4Character, setTeam4Character] = useState(panda);
   const [Team5Character, setTeam5Character] = useState(bunny);
+  const [Team1Name, setTeam1Name] = useState("");
+  const [Team2Name, setTeam2Name] = useState("");
+  const [Team3Name, setTeam3Name] = useState("");
+  const [Team4Name, setTeam4Name] = useState("");
+  const [Team5Name, setTeam5Name] = useState("");
   return (
     <div className="App" style={{textAlign: "center"}}>
         {(() => {
@@ -65,16 +71,23 @@ const App = () => {
             return <Points setCurrentPage={setCurrentPage} points={points} status={status} setCurrentTeam={setCurrentTeam} 
             teams={teams} currentTeam={currentTeam} clickedCategories={clickedCategories} Team1Character={Team1Character} 
             Team2Character={Team2Character} Team3Character={Team3Character} Team4Character={Team4Character} 
-            Team5Character={Team5Character}/>;
+            Team5Character={Team5Character} Team1Name={Team1Name} Team2Name={Team2Name} Team3Name={Team3Name} Team4Name={Team4Name} 
+            Team5Name={Team5Name}/>;
         } else if (currentPage === "winner") {
             return <Winner setCurrentPage={setCurrentPage} points={points} setCurTeam={setCurTeam} Team1Character={Team1Character} 
             Team2Character={Team2Character} Team3Character={Team3Character} Team4Character={Team4Character} 
-            Team5Character={Team5Character}/>;
+            Team5Character={Team5Character} Team1Name={Team1Name} Team2Name={Team2Name} Team3Name={Team3Name} Team4Name={Team4Name} 
+            Team5Name={Team5Name}/>;
         } else if (currentPage === "characters") {
           return <Characters setCurrentPage={setCurrentPage} setClickedCharacters={setClickedCharacters} 
           clickedCharacters={clickedCharacters} teams={teams} curTeam={curTeam} setCurTeam={setCurTeam} setTeam1Character={setTeam1Character}
           setTeam2Character={setTeam2Character} setTeam3Character={setTeam3Character} setTeam4Character={setTeam4Character} 
           setTeam5Character={setTeam5Character}/>
+        } else if (currentPage === "names") {
+          return <Names setCurrentPage={setCurrentPage} teams={teams} Team1Character={Team1Character} 
+          Team2Character={Team2Character} Team3Character={Team3Character} Team4Character={Team4Character} Team5Character={Team5Character} 
+          setTeam1Name={setTeam1Name} setTeam2Name={setTeam2Name} setTeam3Name={setTeam3Name} setTeam4Name={setTeam4Name} 
+          setTeam5Name={setTeam5Name}/>;
         }
     })()}
     </div>

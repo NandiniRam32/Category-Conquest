@@ -25,7 +25,7 @@ export const Characters = ({setCurrentPage, setClickedCharacters, clickedCharact
         if (teams > curTeam) {
             setCurrentPage("characters");
         } else {
-            setCurrentPage("categories");
+            setCurrentPage("names");
         }
     };
 
