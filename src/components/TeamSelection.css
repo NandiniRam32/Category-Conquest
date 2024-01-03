@@ -38,3 +38,11 @@
 .hidden {
     display: none;
 }
+
+.changeBgClr {
+    color: white;
+}
+
+.changeBgClr:hover {
+    color: #c305fc;
+}
