@@ -1,13 +1,22 @@
 import React from "react";
 import "./components/TeamSelection.css";
 
-export const TeamSelection = ({setCurrentPage, setCurrentTeams, setCurTeam}) => {
+export const TeamSelection = ({setCurrentPage, setCurrentTeams, setCurTeam, setPoints}) => {
     const handleSetPage = (selectedPage) => {
         setCurrentPage(selectedPage);
     };
 
     const handleSetTeams = (selectedTeams) => {
         setCurrentTeams(selectedTeams);
+        if (selectedTeams === 2) {
+            setPoints([0, 0, -1, -1, -1]);
+        } else if (selectedTeams === 3) {
+            setPoints([0, 0, 0, -1, -1]);
+        } else if (selectedTeams === 4) {
+            setPoints([0, 0, 0, 0, -1]);
+        } else if (selectedTeams === 2) {
+            setPoints([0, 0, 0, 0, 0]);
+        }
         setCurrentPage("characters");
     };
 

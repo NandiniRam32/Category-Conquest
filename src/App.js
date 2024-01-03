@@ -33,7 +33,7 @@ const App = () => {
   const [category, setCategory] = useState('science');
   const [level, setCurrentLevel] = useState('easy');
   const [teams, setCurrentTeams] = useState(5);
-  const [points, setPoints] = useState([0, 0, 0, 0, 0]);
+  const [points, setPoints] = useState([-1, -1, -1, -1, -1]);
   const [currentTeam, setCurrentTeam] = useState(0);
   const [status, setStatus] = useState("Correct!");
   const [clickedCategories, setClickedCategories] = useState(new Set());
@@ -56,7 +56,8 @@ const App = () => {
             return <MainMenu setCurrentPage={setCurrentPage} setPoints={setPoints} setCurrentTeam={setCurrentTeam} 
             setClickedCategories={setClickedCategories} setClickedCharacters={setClickedCharacters}/>;
         } else if (currentPage === "team") {
-            return <TeamSelection setCurrentPage={setCurrentPage} setCurrentTeams={setCurrentTeams} setCurTeam={setCurTeam}/>;
+            return <TeamSelection setCurrentPage={setCurrentPage} setCurrentTeams={setCurrentTeams} setCurTeam={setCurTeam} 
+            setPoints={setPoints}/>;
         } else if (currentPage === "rules") {
             return <Rules setCurrentPage={setCurrentPage} setCurTeam={setCurTeam}/>;
         } else if (currentPage === "levels") {
@@ -77,7 +78,7 @@ const App = () => {
             return <Winner setCurrentPage={setCurrentPage} points={points} setCurTeam={setCurTeam} Team1Character={Team1Character} 
             Team2Character={Team2Character} Team3Character={Team3Character} Team4Character={Team4Character} 
             Team5Character={Team5Character} Team1Name={Team1Name} Team2Name={Team2Name} Team3Name={Team3Name} Team4Name={Team4Name} 
-            Team5Name={Team5Name}/>;
+            Team5Name={Team5Name} teams={teams}/>;
         } else if (currentPage === "characters") {
           return <Characters setCurrentPage={setCurrentPage} setClickedCharacters={setClickedCharacters} 
           clickedCharacters={clickedCharacters} teams={teams} curTeam={curTeam} setCurTeam={setCurTeam} setTeam1Character={setTeam1Character}

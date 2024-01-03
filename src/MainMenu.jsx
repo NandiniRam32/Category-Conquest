@@ -10,7 +10,7 @@ export const MainMenu = ({setCurrentPage, setPoints, setCurrentTeam, setClickedC
     };
 
     const handleResetPoints = () => {
-        setPoints([0, 0, 0, 0, 0]);
+        setPoints([-1, -1, -1, -1, -1]);
     }
 
     return (

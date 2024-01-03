@@ -1,7 +1,7 @@
 import React from "react";
 
 export const Winner = ({setCurrentPage, points, setCurTeam, Team1Character, Team2Character, Team3Character, 
-                        Team4Character, Team5Character, Team1Name, Team2Name, Team3Name, Team4Name, Team5Name}) => {
+                        Team4Character, Team5Character, Team1Name, Team2Name, Team3Name, Team4Name, Team5Name, teams}) => {
     const handleSetPage = (selectedPage) => {
         setCurrentPage(selectedPage);
     };
@@ -52,11 +52,11 @@ export const Winner = ({setCurrentPage, points, setCurTeam, Team1Character, Team
                     <span><img style={{marginRight: "4vw", height: "12vh"}} src={Team2Character} alt="Team 2 Character" 
                             className={winTeam.includes(Team2Name) ? '' : 'hidden'}/></span>
                     <span><img style={{marginRight: "4vw", height: "12vh"}} src={Team3Character} alt="Team 3 Character" 
-                            className={winTeam.includes(Team3Name) ? '' : 'hidden'}/></span>
+                            className={winTeam.includes(Team3Name) && teams >= 3 ? '' : 'hidden'}/></span>
                     <span><img style={{marginRight: "4vw", height: "12vh"}} src={Team4Character} alt="Team 4 Character" 
-                            className={winTeam.includes(Team4Name) ? '' : 'hidden'}/></span>
+                            className={winTeam.includes(Team4Name) && teams >= 4 ? '' : 'hidden'}/></span>
                     <span><img style={{marginRight: "4vw", height: "12vh"}} src={Team5Character} alt="Team 5 Character" 
-                            className={winTeam.includes(Team5Name) ? '' : 'hidden'}/></span>
+                            className={winTeam.includes(Team5Name) && teams >= 5 ? '' : 'hidden'}/></span>
                 </div>
                 <div style={{marginTop: "4vh", paddingLeft: "10vh", paddingRight: "10vh"}}>
                     <div style={{background: "#44d8fc", fontSize: "3vw", color: "black"}} onClick={() => { handleSetPage("main"); setCurTeam(1); }}><b>Main Menu</b></div>
