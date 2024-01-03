@@ -60,7 +60,8 @@ export const Winner = ({setCurrentPage, points, setCurTeam, Team1Character, Team
                             className={winTeam.includes(Team5Name) && teams >= 5 ? '' : 'hidden'}/></span>
                 </div>
                 <div style={{marginTop: "4vh", paddingLeft: "10vh", paddingRight: "10vh"}}>
-                    <div style={{background: "#44d8fc", fontSize: "3vw", color: "black"}} onClick={() => { handleSetPage("main"); setCurTeam(1); }}><b>Main Menu</b></div>
+                    <div style={{background: "#44d8fc", fontSize: "3vw"}} onClick={() => { handleSetPage("main"); setCurTeam(1);}} 
+                    className="changeColorWhite"><b>Main Menu</b></div>
                 </div>
             </div>
         </>

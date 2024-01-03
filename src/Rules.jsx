@@ -17,7 +17,8 @@ export const Rules = ({setCurrentPage, setCurTeam, backgroundColor}) => {
                 will be placed on the screen. The first team chooses a category, and they get to answer a question from that category. 
                 Rotate teams. Each question will be of similar difficulty and worth the same number 
                 of points. In the end (when all the categories have run out), whichever team has the most amount of points wins.</text>
-                <div style={{marginTop: "3vw", background: "#44d8fc", fontSize: "3vw", color: "black"}} onClick={() => { handleSetPage("main"); setCurTeam(1); }}><b>Main Menu</b></div>
+                <div style={{marginTop: "3vw", background: "#44d8fc", fontSize: "3vw"}} onClick={() => { handleSetPage("main"); 
+                setCurTeam(1); }} className="changeColorWhite"><b>Main Menu</b></div>
             </div>
         </div>
     );

@@ -3118,19 +3118,20 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
                 <b style={{alignItems: "center", color: "white", fontFamily: "monospace", fontSize: "4vw"}}>{currQ}</b>
                 <div style={{height: "8vh"}}></div>
                 <div style={{marginLeft: "8vw"}}>
-                    <text style={{background: "#28fc81", marginRight: "6vw", fontSize: "2.8vw"}} className="teamsChoice" 
+                    <text style={{background: "#28fc81", marginRight: "6vw", fontSize: "2.8vw"}} className="changeBgClrBlack teamsChoice" 
                     onClick={() => handleAnswerClick(answers[0])}><b>{answers[0]}</b></text>
-                    <text style={{background: "#ff6bee", marginRight: "6vw", fontSize: "2.8vw"}} className="teamsChoice" 
+                    <text style={{background: "#ff6bee", marginRight: "6vw", fontSize: "2.8vw"}} className="changeBgClrBlack teamsChoice" 
                     onClick={() => handleAnswerClick(answers[1])}><b>{answers[1]}</b></text>
                 </div>
                 <div style={{marginTop: "18vh", marginLeft: "8vw"}}>
-                    <text style={{background: "#c66bff", marginRight: "6vw", fontSize: "2.8vw"}} className="teamsChoice" 
+                    <text style={{background: "#c66bff", marginRight: "6vw", fontSize: "2.8vw"}} className="changeBgClrBlack teamsChoice" 
                     onClick={() => handleAnswerClick(answers[2])}><b>{answers[2]}</b></text>
-                    <text style={{background: "#44d8fc", marginRight: "6vw", fontSize: "2.8vw"}} className="teamsChoice" 
+                    <text style={{background: "#44d8fc", marginRight: "6vw", fontSize: "2.8vw"}} className="changeBgClrBlack teamsChoice" 
                     onClick={() => handleAnswerClick(answers[3])}><b>{answers[3]}</b></text>
                 </div>
                 <div style={{marginTop: "10vh", paddingLeft: "10vh", paddingRight: "10vh"}}>
-                    <div style={{background: "#44d8fc", fontSize: "3vw", color: "black"}} onClick={() => { handleSetPage("main"); setCurTeam(1); }}><b>Main Menu</b></div>
+                    <div style={{background: "#44d8fc", fontSize: "3vw"}} onClick={() => { handleSetPage("main"); setCurTeam(1);}} 
+                    className="changeColorWhite"><b>Main Menu</b></div>
                 </div>
             </div>
         </div>

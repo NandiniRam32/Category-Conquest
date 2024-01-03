@@ -47,7 +47,8 @@ export const Points = ({setCurrentPage, points, status, setCurrentTeam, teams, c
                     <text style={{marginLeft: "8vw", fontFamily: "monospace", fontSize: "4vw",}}>{points[4]} points</text>
                 </div>
                 <div style={{marginTop: "4vh", paddingLeft: "10vh", paddingRight: "10vh"}}>
-                    <div style={{background: "#44d8fc", fontSize: "3vw", color: "black"}} onClick={() => handleSetPage("categories")}><b>Next Round</b></div>
+                    <div style={{background: "#44d8fc", fontSize: "3vw"}} onClick={() => handleSetPage("categories")} 
+                    className="changeColorWhite"><b>Next Round</b></div>
                 </div>
             </div>
         </>

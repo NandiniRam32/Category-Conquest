@@ -43,10 +43,10 @@ export const MainMenu = ({setCurrentPage, setPoints, setCurrentTeam, setClickedC
                 <div style={{height: "20vh"}}></div>
                 <div style={{background: "#3cbbfa", height: "14vh", width: "14vw", marginLeft: "42vw", border: "0.5vw solid white",
                             fontFamily: "monospace", fontSize: "4vw", alignItems: "center", paddingTop: "4vh"}} 
-                            onClick={() => handleSetPage("rules")}><b>Rules</b></div>
+                            onClick={() => handleSetPage("rules")} className="changeBgClrBlack"><b>Rules</b></div>
                 <div style={{background: "#c04dfa", height: "14vh", width: "14vw", marginLeft: "42vw", border: "0.5vw solid white",
                             fontFamily: "monospace", fontSize: "4vw", alignItems: "center", paddingTop: "4vh", 
-                            marginTop: "2vh"}} onClick={() => handleSetPage("levels")}><b>Play</b></div>
+                            marginTop: "2vh"}} onClick={() => handleSetPage("levels")} className="changeBgClrBlack"><b>Play</b></div>
                 <div className="changeBgClr" style={{height: "6vh", width: "32vw", marginLeft: "68vw", 
                             fontFamily: "monospace", fontSize: "2vw", alignItems: "center", marginTop: "3.4vw"}} onClick={() => 
                             handleBackgroundColorChange(backgroundColor)}><b>Change Background Color</b></div>
