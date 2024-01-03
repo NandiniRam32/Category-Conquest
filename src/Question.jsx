@@ -1,7 +1,7 @@
 import React from "react";
 import "./components/TeamSelection.css";
 
-export const Question = ({setCurrentPage, setPoints, level, category, currentTeam, points, setStatus, setCurTeam}) => {
+export const Question = ({setCurrentPage, setPoints, level, category, currentTeam, points, setStatus, setCurTeam, backgroundColor}) => {
     const handleSetPage = (selectedPage) => {
         setCurrentPage(selectedPage);
     };
@@ -3114,7 +3114,7 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
     
     return (
         <div className="teamsContainer">
-            <div style={{ background: "black", width: "100vw", height: "100vh", color: "white", alignContent: "center"}}>
+            <div style={{ background: backgroundColor, width: "100vw", height: "100vh", color: "white", alignContent: "center"}}>
                 <b style={{alignItems: "center", color: "white", fontFamily: "monospace", fontSize: "4vw"}}>{currQ}</b>
                 <div style={{height: "8vh"}}></div>
                 <div style={{marginLeft: "8vw"}}>

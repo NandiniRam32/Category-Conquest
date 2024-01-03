@@ -1,7 +1,7 @@
 import React from "react";
 import "./components/TeamSelection.css";
 
-export const Categories = ({setCategory, setCurrentPage, clickedCategories, setClickedCategories, setCurTeam}) => {
+export const Categories = ({setCategory, setCurrentPage, clickedCategories, setClickedCategories, setCurTeam, backgroundColor}) => {
     const handleSetCategory = (selectedCategory) => {
         setCategory(selectedCategory);
         setClickedCategories((prevClickedCategories) => new Set([...prevClickedCategories, selectedCategory]));
@@ -18,7 +18,7 @@ export const Categories = ({setCategory, setCurrentPage, clickedCategories, setC
 
     return (
         <div className="teamsContainer">
-            <div style={{ background: "black", width: "100vw", height: "100vh", color: "white", alignContent: "center"}}>
+            <div style={{ background: backgroundColor, width: "100vw", height: "100vh", color: "white", alignContent: "center"}}>
                 <div style={{height: "8vh"}}></div>
                 <div style={{marginLeft: "8vw"}}>
                     <text style={{background: "#28fc81", marginRight: "6vw"}} className={`teamsChoice1 ${handleCategoryDisappear("science") 

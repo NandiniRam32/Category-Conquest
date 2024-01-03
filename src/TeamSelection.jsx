@@ -1,7 +1,7 @@
 import React from "react";
 import "./components/TeamSelection.css";
 
-export const TeamSelection = ({setCurrentPage, setCurrentTeams, setCurTeam, setPoints}) => {
+export const TeamSelection = ({setCurrentPage, setCurrentTeams, setCurTeam, setPoints, backgroundColor}) => {
     const handleSetPage = (selectedPage) => {
         setCurrentPage(selectedPage);
     };
@@ -22,7 +22,7 @@ export const TeamSelection = ({setCurrentPage, setCurrentTeams, setCurTeam, setP
 
     return (
         <div className="teamsContainer">
-            <div style={{ background: "black", width: "100vw", height: "100vh", color: "white", alignContent: "center"}}>
+            <div style={{ background: backgroundColor, width: "100vw", height: "100vh", color: "white", alignContent: "center"}}>
                 <b style={{alignItems: "center", color: "white", fontFamily: "monospace", fontSize: "11vw"}}>Team Selection</b>
                 <div style={{height: "8vh"}}></div>
                 <div style={{marginLeft: "8vw"}}>

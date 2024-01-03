@@ -1,13 +1,13 @@
 import React from "react";
 import "./components/TeamSelection.css";
 
-export const Rules = ({setCurrentPage, setCurTeam}) => {
+export const Rules = ({setCurrentPage, setCurTeam, backgroundColor}) => {
     const handleSetPage = (selectedPage) => {
         setCurrentPage(selectedPage);
     };
     
     return (
-        <div style={{ background: "black", width: "100vw", height: "100vh", color: "white", alignContent: "center"}}>
+        <div style={{ background: backgroundColor, width: "100vw", height: "100vh", color: "white", alignContent: "center"}}>
             <b style={{alignItems: "center", color: "white", fontFamily: "monospace", fontSize: "11vw"}}>Rules</b>
             <div style={{height: "0vh"}}></div>
             <div style={{paddingLeft: "10vh", paddingRight: "10vh"}}>

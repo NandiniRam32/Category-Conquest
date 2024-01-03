@@ -18,7 +18,7 @@ import octopus from './components/octopus.jpg';
 import squirrel from './components/squirrel.jpg';
 
 export const Characters = ({setCurrentPage, setClickedCharacters, clickedCharacters, teams, setCurTeam, curTeam, setTeam1Character, 
-                        setTeam2Character, setTeam3Character, setTeam4Character, setTeam5Character}) => {
+                        setTeam2Character, setTeam3Character, setTeam4Character, setTeam5Character, backgroundColor}) => {
     const handleSetCharacter = (selectedCharacter) => {
         setClickedCharacters((prevClickedCharacters) => new Set([...prevClickedCharacters, selectedCharacter]));
         setCurTeam((prevCurTeam) => (prevCurTeam + 1));
@@ -45,7 +45,7 @@ export const Characters = ({setCurrentPage, setClickedCharacters, clickedCharact
 
     return (
         <div className="teamsContainer">
-            <div style={{ background: "black", width: "100vw", height: "100vh", color: "white", alignContent: "center"}}>
+            <div style={{ background: backgroundColor, width: "100vw", height: "100vh", color: "white", alignContent: "center"}}>
                 <div style={{marginTop: "2vh", fontSize: "4.8vw", fontWeight: "bold"}}>Choose Team {curTeam}'s Character</div>
                 <div style={{height: "12vh", marginTop: "4vh"}}>
                     <span><img style={{marginRight: "4vw", height: "12vh"}} src={cat} alt="Cat" 

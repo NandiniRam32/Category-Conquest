@@ -49,46 +49,48 @@ const App = () => {
   const [Team3Name, setTeam3Name] = useState("");
   const [Team4Name, setTeam4Name] = useState("");
   const [Team5Name, setTeam5Name] = useState("");
+  const [backgroundColor, setBackgroundColor] = useState("black");
   return (
     <div className="App" style={{textAlign: "center"}}>
         {(() => {
         if (currentPage === "main") {
             return <MainMenu setCurrentPage={setCurrentPage} setPoints={setPoints} setCurrentTeam={setCurrentTeam} 
-            setClickedCategories={setClickedCategories} setClickedCharacters={setClickedCharacters}/>;
+            setClickedCategories={setClickedCategories} setClickedCharacters={setClickedCharacters} backgroundColor={backgroundColor} 
+            setBackgroundColor={setBackgroundColor}/>;
         } else if (currentPage === "team") {
             return <TeamSelection setCurrentPage={setCurrentPage} setCurrentTeams={setCurrentTeams} setCurTeam={setCurTeam} 
-            setPoints={setPoints}/>;
+            setPoints={setPoints} backgroundColor={backgroundColor}/>;
         } else if (currentPage === "rules") {
-            return <Rules setCurrentPage={setCurrentPage} setCurTeam={setCurTeam}/>;
+            return <Rules setCurrentPage={setCurrentPage} setCurTeam={setCurTeam} backgroundColor={backgroundColor}/>;
         } else if (currentPage === "levels") {
-            return <Levels setCurrentPage={setCurrentPage} setCurrentLevel={setCurrentLevel}/>;
+            return <Levels setCurrentPage={setCurrentPage} setCurrentLevel={setCurrentLevel} backgroundColor={backgroundColor}/>;
         } else if (currentPage === "categories") {
             return <Categories setCategory={setCategory} setCurrentPage={setCurrentPage} clickedCategories={clickedCategories} 
-            setClickedCategories={setClickedCategories} setCurTeam={setCurTeam}/>;
+            setClickedCategories={setClickedCategories} setCurTeam={setCurTeam} backgroundColor={backgroundColor}/>;
         } else if (currentPage === "question") {
             return <Question category={category} setCurrentPage={setCurrentPage} setPoints={setPoints} level={level} 
-            currentTeam={currentTeam} points={points} setStatus={setStatus} setCurTeam={setCurTeam}/>;
+            currentTeam={currentTeam} points={points} setStatus={setStatus} setCurTeam={setCurTeam} backgroundColor={backgroundColor}/>;
         } else if (currentPage === "points") {
             return <Points setCurrentPage={setCurrentPage} points={points} status={status} setCurrentTeam={setCurrentTeam} 
             teams={teams} currentTeam={currentTeam} clickedCategories={clickedCategories} Team1Character={Team1Character} 
             Team2Character={Team2Character} Team3Character={Team3Character} Team4Character={Team4Character} 
             Team5Character={Team5Character} Team1Name={Team1Name} Team2Name={Team2Name} Team3Name={Team3Name} Team4Name={Team4Name} 
-            Team5Name={Team5Name}/>;
+            Team5Name={Team5Name} backgroundColor={backgroundColor}/>;
         } else if (currentPage === "winner") {
             return <Winner setCurrentPage={setCurrentPage} points={points} setCurTeam={setCurTeam} Team1Character={Team1Character} 
             Team2Character={Team2Character} Team3Character={Team3Character} Team4Character={Team4Character} 
             Team5Character={Team5Character} Team1Name={Team1Name} Team2Name={Team2Name} Team3Name={Team3Name} Team4Name={Team4Name} 
-            Team5Name={Team5Name} teams={teams}/>;
+            Team5Name={Team5Name} teams={teams} backgroundColor={backgroundColor}/>;
         } else if (currentPage === "characters") {
           return <Characters setCurrentPage={setCurrentPage} setClickedCharacters={setClickedCharacters} 
           clickedCharacters={clickedCharacters} teams={teams} curTeam={curTeam} setCurTeam={setCurTeam} setTeam1Character={setTeam1Character}
           setTeam2Character={setTeam2Character} setTeam3Character={setTeam3Character} setTeam4Character={setTeam4Character} 
-          setTeam5Character={setTeam5Character}/>
+          setTeam5Character={setTeam5Character} backgroundColor={backgroundColor}/>
         } else if (currentPage === "names") {
           return <Names setCurrentPage={setCurrentPage} teams={teams} Team1Character={Team1Character} 
           Team2Character={Team2Character} Team3Character={Team3Character} Team4Character={Team4Character} Team5Character={Team5Character} 
           setTeam1Name={setTeam1Name} setTeam2Name={setTeam2Name} setTeam3Name={setTeam3Name} setTeam4Name={setTeam4Name} 
-          setTeam5Name={setTeam5Name}/>;
+          setTeam5Name={setTeam5Name} backgroundColor={backgroundColor}/>;
         }
     })()}
     </div>

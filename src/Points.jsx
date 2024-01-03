@@ -2,7 +2,8 @@ import React from "react";
 import "./components/TeamSelection.css";
 
 export const Points = ({setCurrentPage, points, status, setCurrentTeam, teams, currentTeam, clickedCategories, Team1Character, 
-    Team2Character, Team3Character, Team4Character, Team5Character, Team1Name, Team2Name, Team3Name, Team4Name, Team5Name}) => {
+    Team2Character, Team3Character, Team4Character, Team5Character, Team1Name, Team2Name, Team3Name, Team4Name, Team5Name, 
+    backgroundColor}) => {
     const handleSetPage = (selectedPage) => {
         setCurrentTeam((currentTeam + 1) % teams);
         setCurrentPage(selectedPage);
@@ -13,7 +14,7 @@ export const Points = ({setCurrentPage, points, status, setCurrentTeam, teams, c
 
     return (
         <>
-            <div style={{ background: "black", width: "100vw", height: "100vh", color: "white", alignContent: "center"}}>
+            <div style={{ background: backgroundColor, width: "100vw", height: "100vh", color: "white", alignContent: "center"}}>
                 <b style={{alignItems: "center", color: "white", fontFamily: "monospace", fontSize: "6vw"}}>{status}</b>
                 <div>
                     <span><img style={{marginRight: "4vw", height: "10vh"}} src={Team1Character} alt="Team 1 Character" /></span>

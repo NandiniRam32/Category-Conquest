@@ -1,7 +1,8 @@
 import React from "react";
 
 export const Winner = ({setCurrentPage, points, setCurTeam, Team1Character, Team2Character, Team3Character, 
-                        Team4Character, Team5Character, Team1Name, Team2Name, Team3Name, Team4Name, Team5Name, teams}) => {
+                        Team4Character, Team5Character, Team1Name, Team2Name, Team3Name, Team4Name, Team5Name, teams, 
+                        backgroundColor}) => {
     const handleSetPage = (selectedPage) => {
         setCurrentPage(selectedPage);
     };
@@ -39,7 +40,7 @@ export const Winner = ({setCurrentPage, points, setCurTeam, Team1Character, Team
 
     return (
         <>
-            <div style={{ background: "black", width: "100vw", height: "100vh", color: "white", alignContent: "center"}}>
+            <div style={{ background: backgroundColor, width: "100vw", height: "100vh", color: "white", alignContent: "center"}}>
                 <b style={{alignItems: "center", color: "white", fontFamily: "monospace", fontSize: "7.6vw"}}>Thank You For Playing!</b>
                 <div style={{fontSize: "5vw"}}>And the winner is...</div>
                 <div style={{height: "8vh"}}></div>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-export const Names = ({setCurrentPage, teams, Team1Character, Team2Character, Team3Character, 
-                        Team4Character, Team5Character, setTeam1Name, setTeam2Name, setTeam3Name, setTeam4Name, setTeam5Name}) => {
+export const Names = ({setCurrentPage, teams, Team1Character, Team2Character, Team3Character, Team4Character, Team5Character, 
+    setTeam1Name, setTeam2Name, setTeam3Name, setTeam4Name, setTeam5Name, backgroundColor}) => {
     const [temp1Name, setTemp1Name] = useState("");
     const [temp2Name, setTemp2Name] = useState("");
     const [temp3Name, setTemp3Name] = useState("");
@@ -83,7 +83,7 @@ export const Names = ({setCurrentPage, teams, Team1Character, Team2Character, Te
 
     return (
         <>
-            <div style={{ background: "black", width: "100vw", height: "100vh", color: "white", alignContent: "center"}}>
+            <div style={{ background: backgroundColor, width: "100vw", height: "100vh", color: "white", alignContent: "center"}}>
                 <div style={{fontSize: "4.8vw", fontWeight: "bold"}}>Choose Team Names</div>
                 <div style={{height: "12vh", marginTop: "2vh"}} className={teams >= 1 ? '' : 'hidden'}>
                     <span><img style={{marginRight: "4vw", height: "10vh"}} src={Team1Character} alt="Team1Character" 
