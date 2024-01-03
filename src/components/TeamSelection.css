@@ -46,3 +46,19 @@
 .changeBgClr:hover {
     color: #c305fc;
 }
+
+.changeBgClrBlack {
+    color: white;
+}
+
+.changeBgClrBlack:hover {
+    color: black;
+}
+
+.changeColorWhite {
+    color: black;
+}
+
+.changeColorWhite:hover {
+    color: white;
+}
