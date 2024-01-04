@@ -14,7 +14,7 @@ export const TeamSelection = ({setCurrentPage, setCurrentTeams, setCurTeam, setP
             setPoints([0, 0, 0, -1, -1]);
         } else if (selectedTeams === 4) {
             setPoints([0, 0, 0, 0, -1]);
-        } else if (selectedTeams === 2) {
+        } else if (selectedTeams === 5) {
             setPoints([0, 0, 0, 0, 0]);
         }
         setCurrentPage("characters");
