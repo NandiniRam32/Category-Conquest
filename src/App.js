@@ -9,6 +9,7 @@ import { Points } from './Points';
 import { Winner } from './Winner';
 import { Characters } from './Characters';
 import { Names } from './Names';
+import { Mode } from './Mode';
 import cat from './components/cat.jpg';
 import dog from './components/dog.jpg';
 import fox from './components/fox.jpg';
@@ -91,6 +92,8 @@ const App = () => {
           Team2Character={Team2Character} Team3Character={Team3Character} Team4Character={Team4Character} Team5Character={Team5Character} 
           setTeam1Name={setTeam1Name} setTeam2Name={setTeam2Name} setTeam3Name={setTeam3Name} setTeam4Name={setTeam4Name} 
           setTeam5Name={setTeam5Name} backgroundColor={backgroundColor}/>;
+        } else if (currentPage === "mode") {
+          return <Mode setCurrentPage={setCurrentPage} backgroundColor={backgroundColor} />;
         }
     })()}
     </div>

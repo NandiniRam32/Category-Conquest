@@ -3061,36 +3061,37 @@ export const Question = ({setCurrentPage, setPoints, level, category, currentTea
       ];
 
     let newQuestions = questions;
-    if (level === "easy") {
-        newQuestions = questions.filter((question) => question.level === 'Easy');
-    } else if (level === "medium") {
-        newQuestions = questions.filter((question) => question.level === 'Medium');
-    } else if (level === "hard") {
-        newQuestions = questions.filter((question) => question.level === 'Hard');
-    } else if (category === "science") {
-        newQuestions = questions.filter((question) => question.category === 'Science');
+    if (level === "Easy") {
+        newQuestions = questions.filter((question) => question.level === "Easy");
+    } else if (level === "Medium") {
+        newQuestions = questions.filter((question) => question.level === "Medium");
+    } else if (level === "Hard") {
+        newQuestions = questions.filter((question) => question.level === "Hard");
+    }
+    if (category === "science") {
+        newQuestions = newQuestions.filter((question) => question.category === 'Science');
     } else if (category === "popCulture") {
-        newQuestions = questions.filter((question) => question.category === 'Pop Culture');
+        newQuestions = newQuestions.filter((question) => question.category === 'Pop Culture');
     } else if (category === "history") {
-        newQuestions = questions.filter((question) => question.category === 'History');
+        newQuestions = newQuestions.filter((question) => question.category === 'History');
     } else if (category === "technology") {
-        newQuestions = questions.filter((question) => question.category === 'Technology');
+        newQuestions = newQuestions.filter((question) => question.category === 'Technology');
     } else if (category === "art") {
-        newQuestions = questions.filter((question) => question.category === 'Art');
+        newQuestions = newQuestions.filter((question) => question.category === 'Art');
     } else if (category === "sports") {
-        newQuestions = questions.filter((question) => question.category === 'Sports');
+        newQuestions = newQuestions.filter((question) => question.category === 'Sports');
     } else if (category === "cuisine") {
-        newQuestions = questions.filter((question) => question.category === 'Cuisine');
+        newQuestions = newQuestions.filter((question) => question.category === 'Cuisine');
     } else if (category === "literature") {
-        newQuestions = questions.filter((question) => question.category === 'Literature');
+        newQuestions = newQuestions.filter((question) => question.category === 'Literature');
     } else if (category === "movies") {
-        newQuestions = questions.filter((question) => question.category === 'Movies & TV');
+        newQuestions = newQuestions.filter((question) => question.category === 'Movies & TV');
     } else if (category === "music") {
-        newQuestions = questions.filter((question) => question.category === 'Music');
+        newQuestions = newQuestions.filter((question) => question.category === 'Music');
     } else if (category === "general") {
-        newQuestions = questions.filter((question) => question.category === 'General Trivia');
+        newQuestions = newQuestions.filter((question) => question.category === 'General Trivia');
     } else if (category === "geography") {
-        newQuestions = questions.filter((question) => question.category === 'Geography');
+        newQuestions = newQuestions.filter((question) => question.category === 'Geography');
     }
 
     let randomIndex = Math.floor(Math.random() * newQuestions.length);
