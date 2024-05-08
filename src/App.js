@@ -10,6 +10,14 @@ import { Winner } from './Winner';
 import { Characters } from './Characters';
 import { Names } from './Names';
 import { Mode } from './Mode';
+import { QuestionArcade } from './QuestionArcade';
+import { LevelsSolo } from './LevelsSolo';
+import { CharactersSolo } from './CharactersSolo';
+import { NamesSolo } from './NamesSolo';
+import { CategoriesSolo } from './CategoriesSolo';
+import { QuestionSolo } from './QuestionSolo';
+import { PointsSolo } from './PointsSolo';
+import { WinnerSolo } from './WinnerSolo';
 import cat from './components/cat.jpg';
 import dog from './components/dog.jpg';
 import fox from './components/fox.jpg';
@@ -51,6 +59,10 @@ const App = () => {
   const [Team4Name, setTeam4Name] = useState("");
   const [Team5Name, setTeam5Name] = useState("");
   const [backgroundColor, setBackgroundColor] = useState("black");
+  const [mode, setMode] = useState("classic");
+  const [soloCharacter, setSoloCharacter] = useState(cat);
+  const [soloName, setSoloName] = useState("");
+  const [soloPoints, setSoloPoints] = useState(0);
   return (
     <div className="App" style={{textAlign: "center"}}>
         {(() => {
@@ -67,10 +79,11 @@ const App = () => {
             return <Levels setCurrentPage={setCurrentPage} setCurrentLevel={setCurrentLevel} backgroundColor={backgroundColor}/>;
         } else if (currentPage === "categories") {
             return <Categories setCategory={setCategory} setCurrentPage={setCurrentPage} clickedCategories={clickedCategories} 
-            setClickedCategories={setClickedCategories} setCurTeam={setCurTeam} backgroundColor={backgroundColor}/>;
+            setClickedCategories={setClickedCategories} setCurTeam={setCurTeam} backgroundColor={backgroundColor} mode={mode}/>;
         } else if (currentPage === "question") {
             return <Question category={category} setCurrentPage={setCurrentPage} setPoints={setPoints} level={level} 
-            currentTeam={currentTeam} points={points} setStatus={setStatus} setCurTeam={setCurTeam} backgroundColor={backgroundColor}/>;
+            currentTeam={currentTeam} points={points} setStatus={setStatus} setCurTeam={setCurTeam} backgroundColor={backgroundColor} 
+            mode={mode}/>;
         } else if (currentPage === "points") {
             return <Points setCurrentPage={setCurrentPage} points={points} status={status} setCurrentTeam={setCurrentTeam} 
             teams={teams} currentTeam={currentTeam} clickedCategories={clickedCategories} Team1Character={Team1Character} 
@@ -93,7 +106,33 @@ const App = () => {
           setTeam1Name={setTeam1Name} setTeam2Name={setTeam2Name} setTeam3Name={setTeam3Name} setTeam4Name={setTeam4Name} 
           setTeam5Name={setTeam5Name} backgroundColor={backgroundColor}/>;
         } else if (currentPage === "mode") {
-          return <Mode setCurrentPage={setCurrentPage} backgroundColor={backgroundColor} />;
+          return <Mode setCurrentPage={setCurrentPage} backgroundColor={backgroundColor} setMode={setMode} setSoloPoints={setSoloPoints}/>;
+        } else if (currentPage === "questionArcade") {
+          return <QuestionArcade category={category} setCurrentPage={setCurrentPage} setPoints={setPoints} level={level} 
+            currentTeam={currentTeam} points={points} setStatus={setStatus} setCurTeam={setCurTeam} backgroundColor={backgroundColor} 
+            mode={mode}/>;
+        } else if (currentPage === "levelsSolo") {
+          return <LevelsSolo setCurrentPage={setCurrentPage} setCurrentLevel={setCurrentLevel} backgroundColor={backgroundColor}/>;
+        } else if (currentPage === "charactersSolo") {
+          return <CharactersSolo setCurrentPage={setCurrentPage} setClickedCharacters={setClickedCharacters} 
+          clickedCharacters={clickedCharacters} setCurTeam={setCurTeam} backgroundColor={backgroundColor} 
+          soloCharacter={soloCharacter} setSoloCharacter={setSoloCharacter}/>
+        } else if (currentPage === "namesSolo") {
+          return <NamesSolo setCurrentPage={setCurrentPage} soloCharacter={soloCharacter} backgroundColor={backgroundColor} 
+          soloName={soloName} setSoloName={setSoloName}/>;
+        } else if (currentPage === "categoriesSolo") {
+          return <CategoriesSolo setCategory={setCategory} setCurrentPage={setCurrentPage} clickedCategories={clickedCategories} 
+          setClickedCategories={setClickedCategories} setCurTeam={setCurTeam} backgroundColor={backgroundColor} mode={mode}/>;
+        } else if (currentPage === "questionSolo") {
+          return <QuestionSolo category={category} setCurrentPage={setCurrentPage} setPoints={setPoints} level={level} 
+          currentTeam={currentTeam} points={points} setStatus={setStatus} setCurTeam={setCurTeam} backgroundColor={backgroundColor} 
+          mode={mode} soloPoints={soloPoints} setSoloPoints={setSoloPoints} clickedCategories={clickedCategories}/>;
+        } else if (currentPage === "pointsSolo") {
+          return <PointsSolo setCurrentPage={setCurrentPage} soloPoints={soloPoints} setSoloPoints={setSoloPoints} soloCharacter={soloCharacter} soloName={soloName} 
+          backgroundColor={backgroundColor} clickedCategories={clickedCategories}/>
+        } else if (currentPage === "winnerSolo") {
+          return <WinnerSolo setCurrentPage={setCurrentPage} soloPoints={soloPoints} setSoloPoints={setSoloPoints} soloCharacter={soloCharacter} soloName={soloName} 
+          backgroundColor={backgroundColor} clickedCategories={clickedCategories} setCurTeam={setCurTeam}/>
         }
     })()}
     </div>

@@ -88,31 +88,31 @@ export const Names = ({setCurrentPage, teams, Team1Character, Team2Character, Te
                 <div style={{height: "12vh", marginTop: "2vh"}} className={teams >= 1 ? '' : 'hidden'}>
                     <span><img style={{marginRight: "4vw", height: "10vh"}} src={Team1Character} alt="Team1Character" 
                             className={teams > 1 ? '' : 'hidden'}/></span>
-                    <textarea rows={1} value={temp1Name} style={{fontSize: "3.6vw", height: "4.2vw"}} placeholder={"Team 1 Name"} 
+                    <textarea rows={1} value={temp1Name} style={{fontSize: "3.6vw", height: "4.4vw"}} placeholder={"Team 1 Name"} 
                             onChange={handleName1InputChange}/>
                 </div>
                 <div style={{height: "12vh", marginTop: "2vh"}} className={teams >= 2 ? '' : 'hidden'}>
                     <span><img style={{marginRight: "4vw", height: "10vh"}} src={Team2Character} alt="Team2Character" 
                             className={teams > 1 ? '' : 'hidden'}/></span>
-                    <textarea rows={1} value={temp2Name} style={{fontSize: "3.6vw", height: "4.2vw"}} placeholder={"Team 2 Name"} 
+                    <textarea rows={1} value={temp2Name} style={{fontSize: "3.6vw", height: "4.4vw"}} placeholder={"Team 2 Name"} 
                             onChange={handleName2InputChange}/>
                 </div>
                 <div style={{height: "12vh", marginTop: "2vh"}} className={teams >= 3 ? '' : 'hidden'}>
                     <span><img style={{marginRight: "4vw", height: "10vh"}} src={Team3Character} alt="Team3Character" 
                             className={teams > 1 ? '' : 'hidden'}/></span>
-                    <textarea rows={1} value={temp3Name} style={{fontSize: "3.6vw", height: "4.2vw"}} placeholder={"Team 3 Name"} 
+                    <textarea rows={1} value={temp3Name} style={{fontSize: "3.6vw", height: "4.4vw"}} placeholder={"Team 3 Name"} 
                             onChange={handleName3InputChange}/>
                 </div>
                 <div style={{height: "12vh", marginTop: "2vh"}} className={teams >= 4 ? '' : 'hidden'}>
                     <span><img style={{marginRight: "4vw", height: "10vh"}} src={Team4Character} alt="Team3Character" 
                             className={teams > 1 ? '' : 'hidden'}/></span>
-                    <textarea rows={1} value={temp4Name} style={{fontSize: "3.6vw", height: "4.2vw"}} placeholder={"Team 4 Name"} 
+                    <textarea rows={1} value={temp4Name} style={{fontSize: "3.6vw", height: "4.4vw"}} placeholder={"Team 4 Name"} 
                             onChange={handleName4InputChange}/>
                 </div>
                 <div style={{height: "12vh", marginTop: "2vh"}} className={teams >= 5 ? '' : 'hidden'}>
                     <span><img style={{marginRight: "4vw", height: "10vh"}} src={Team5Character} alt="Team3Character" 
                             className={teams > 1 ? '' : 'hidden'}/></span>
-                    <textarea rows={1} value={temp5Name} style={{fontSize: "3.6vw", height: "4.2vw"}} placeholder={"Team 5 Name"} 
+                    <textarea rows={1} value={temp5Name} style={{fontSize: "3.6vw", height: "4.4vw"}} placeholder={"Team 5 Name"} 
                             onChange={handleName5InputChange}/>
                 </div>
                 <div style={{marginTop: "4vh", paddingLeft: "10vh", paddingRight: "10vh"}}>

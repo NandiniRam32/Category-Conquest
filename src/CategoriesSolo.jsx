@@ -1,15 +1,11 @@
 import React from "react";
 import "./components/TeamSelection.css";
 
-export const Categories = ({setCategory, setCurrentPage, clickedCategories, setClickedCategories, setCurTeam, backgroundColor, mode}) => {
+export const CategoriesSolo = ({setCategory, setCurrentPage, clickedCategories, setClickedCategories, setCurTeam, backgroundColor, mode}) => {
     const handleSetCategory = (selectedCategory) => {
         setCategory(selectedCategory);
         setClickedCategories((prevClickedCategories) => new Set([...prevClickedCategories, selectedCategory]));
-        if (mode === "classic") {
-            setCurrentPage("question");
-        } else if (mode === "arcade") {
-            setCurrentPage("questionArcade");
-        }
+        setCurrentPage("questionSolo");
     };
 
     const handleSetPage = (selectedPage) => {
