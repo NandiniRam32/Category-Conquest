@@ -1,0 +1,64 @@
+.teamsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.teamsChoice {
+    height: 18vh;
+    width: 18vw;
+    border: 0.5vw solid white;
+    font-family: monospace;
+    font-size: 4vw;
+    align-items: center;
+    padding: 4vh;
+    margin-top: 2vh;
+    margin-right: "8vw";
+}
+
+.teamsChoice1 {
+    height: 8vh;
+    width: 16vw;
+    border: 0.5vw solid white;
+    font-family: monospace;
+    font-size: 4vw;
+    align-items: center;
+    padding: 2vh;
+    margin-right: "8vw";
+}
+
+.rulesText {
+    align-items: center;
+    align-content: center;
+    font-size: 2.4vw;
+    padding: 2vw;
+    margin: 2vw;
+}
+
+.hidden {
+    display: none;
+}
+
+.changeBgClr {
+    color: white;
+}
+
+.changeBgClr:hover {
+    color: #c305fc;
+}
+
+.changeBgClrBlack {
+    color: white;
+}
+
+.changeBgClrBlack:hover {
+    color: black;
+}
+
+.changeColorWhite {
+    color: black;
+}
+
+.changeColorWhite:hover {
+    color: white;
+}
