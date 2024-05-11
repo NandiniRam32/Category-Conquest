@@ -16,13 +16,17 @@ import redPanda from './components/red-panda.jpg';
 import snake from './components/snake.jpg';
 import octopus from './components/octopus.jpg';
 import squirrel from './components/squirrel.jpg';
+import { useTranslation } from 'react-i18next';
+import Translations from './Translations';
+import i18n from './i18n';
 
 export const CharactersSolo = ({setCurrentPage, setClickedCharacters, clickedCharacters, setSoloCharacter, 
-    backgroundColor}) => {
+    backgroundColor, language}) => {
     const handleSetCharacter = (selectedCharacter) => {
         setClickedCharacters((prevClickedCharacters) => new Set([...prevClickedCharacters, selectedCharacter]));
         setCurrentPage("namesSolo");
     };
+    const { t } = useTranslation();
 
     const handleCharacter = (selectedCharacter) => {
         setSoloCharacter(selectedCharacter);
@@ -31,7 +35,7 @@ export const CharactersSolo = ({setCurrentPage, setClickedCharacters, clickedCha
     return (
         <div className="teamsContainer">
             <div style={{ background: backgroundColor, width: "100vw", height: "100vh", color: "white", alignContent: "center"}}>
-                <div style={{marginTop: "2vh", fontSize: "4.8vw", fontWeight: "bold"}}>Choose Your Character</div>
+                <div style={{marginTop: "2vh", fontSize: "4.8vw", fontWeight: "bold"}}>{language === 'English' ? 'Choose Your Character' : t('Choose Your Character')}</div>
                 <div style={{height: "12vh", marginTop: "4vh"}}>
                     <span><img style={{marginRight: "4vw", height: "12vh"}} src={cat} alt="Cat" 
                             className={!clickedCharacters.has("cat") ? '' : 'hidden'} onClick={() => {handleCharacter(cat); 

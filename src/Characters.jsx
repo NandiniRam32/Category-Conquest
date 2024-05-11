@@ -16,9 +16,12 @@ import redPanda from './components/red-panda.jpg';
 import snake from './components/snake.jpg';
 import octopus from './components/octopus.jpg';
 import squirrel from './components/squirrel.jpg';
+import { useTranslation } from 'react-i18next';
+import Translations from './Translations';
+import i18n from './i18n';
 
 export const Characters = ({setCurrentPage, setClickedCharacters, clickedCharacters, teams, setCurTeam, curTeam, setTeam1Character, 
-                        setTeam2Character, setTeam3Character, setTeam4Character, setTeam5Character, backgroundColor}) => {
+                        setTeam2Character, setTeam3Character, setTeam4Character, setTeam5Character, backgroundColor, language}) => {
     const handleSetCharacter = (selectedCharacter) => {
         setClickedCharacters((prevClickedCharacters) => new Set([...prevClickedCharacters, selectedCharacter]));
         setCurTeam((prevCurTeam) => (prevCurTeam + 1));
@@ -28,6 +31,7 @@ export const Characters = ({setCurrentPage, setClickedCharacters, clickedCharact
             setCurrentPage("names");
         }
     };
+    const { t } = useTranslation();
 
     const handleCharacter = (selectedCharacter) => {
         if (curTeam === 1) {
@@ -46,7 +50,8 @@ export const Characters = ({setCurrentPage, setClickedCharacters, clickedCharact
     return (
         <div className="teamsContainer">
             <div style={{ background: backgroundColor, width: "100vw", height: "100vh", color: "white", alignContent: "center"}}>
-                <div style={{marginTop: "2vh", fontSize: "4.8vw", fontWeight: "bold"}}>Choose Team {curTeam}'s Character</div>
+                <div style={{marginTop: "2vh", fontSize: "4.8vw", fontWeight: "bold"}}>{language === 'English' ? 'Choose Team ' + curTeam + 
+                "'s Character" : t('TeamTitle') + curTeam}</div>
                 <div style={{height: "12vh", marginTop: "4vh"}}>
                     <span><img style={{marginRight: "4vw", height: "12vh"}} src={cat} alt="Cat" 
                             className={!clickedCharacters.has("cat") ? '' : 'hidden'} onClick={() => {handleCharacter(cat); 

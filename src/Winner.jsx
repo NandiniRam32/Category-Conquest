@@ -1,11 +1,15 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
+import Translations from './Translations';
+import i18n from './i18n';
 
 export const Winner = ({setCurrentPage, points, setCurTeam, Team1Character, Team2Character, Team3Character, 
                         Team4Character, Team5Character, Team1Name, Team2Name, Team3Name, Team4Name, Team5Name, teams, 
-                        backgroundColor}) => {
+                        backgroundColor, language}) => {
     const handleSetPage = (selectedPage) => {
         setCurrentPage(selectedPage);
     };
+    const { t } = useTranslation();
 
     let winTeam = Team1Name;
     let maxPoints = points[0];
@@ -41,12 +45,14 @@ export const Winner = ({setCurrentPage, points, setCurTeam, Team1Character, Team
     return (
         <>
             <div style={{ background: backgroundColor, width: "100vw", height: "100vh", color: "white", alignContent: "center"}}>
-                <b style={{alignItems: "center", color: "white", fontFamily: "monospace", fontSize: "7.6vw"}}>Thank You For Playing!</b>
-                <div style={{fontSize: "5vw"}}>And the winner is...</div>
+                <b style={{alignItems: "center", color: "white", fontFamily: "monospace", fontSize: "7.6vw"}}>{language === 'English' ? 
+                'Thank You For Playing!' : t('Thank You For Playing!')}</b>
+                <div style={{fontSize: "5vw"}}>{language === 'English' ? 'And the winner is...' : t('And the winner is...')}</div>
                 <div style={{height: "8vh"}}></div>
                 <span style={{width: "60vw", fontFamily: "monospace", fontSize: "4vw", alignItems: "center", 
-                            padding: "4vh"}}><b>Team {winTeam}</b></span>
-                <div><text style={{marginLeft: "8vw", fontFamily: "monospace", fontSize: "4vw", marginTop: "2vh"}}> with {maxPoints} points!</text></div>
+                            padding: "4vh"}}><b>{language === 'English' ? 'Team' : t('Team')} {winTeam}</b></span>
+                <div><text style={{marginLeft: "8vw", fontFamily: "monospace", fontSize: "4vw", marginTop: "2vh"}}> {language === 'English' ? 'with ' : 
+                t('with ')} {maxPoints} {language === 'English' ? 'point(s)' : t('point(s)')}!</text></div>
                 <div style={{height: "12vh", marginTop: "2vh"}}>
                     <span><img style={{marginRight: "4vw", height: "12vh"}} src={Team1Character} alt="Team 1 Character" 
                             className={winTeam.includes(Team1Name) ? '' : 'hidden'}/></span>
@@ -61,7 +67,7 @@ export const Winner = ({setCurrentPage, points, setCurTeam, Team1Character, Team
                 </div>
                 <div style={{marginTop: "4vh", paddingLeft: "10vh", paddingRight: "10vh"}}>
                     <div style={{background: "#44d8fc", fontSize: "3vw"}} onClick={() => { handleSetPage("main"); setCurTeam(1);}} 
-                    className="changeColorWhite"><b>Main Menu</b></div>
+                    className="changeColorWhite"><b>{language === 'English' ? "Main Menu" : t("Main Menu")}</b></div>
                 </div>
             </div>
         </>

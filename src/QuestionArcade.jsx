@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
 import "./components/TeamSelection.css";
+import { useTranslation } from 'react-i18next';
+import Translations from './Translations';
+import i18n from './i18n';
 
 export const QuestionArcade = ({setCurrentPage, setPoints, level, category, currentTeam, points, setStatus, setCurTeam, backgroundColor, 
-                        mode}) => {
+                        mode, language}) => {
     const handleSetPage = (selectedPage) => {
         setCurrentPage(selectedPage);
     };
+    const { t } = useTranslation();
 
     const handleSetStatus = (newStatus) => {
         setStatus(newStatus);
@@ -3275,24 +3279,24 @@ export const QuestionArcade = ({setCurrentPage, setPoints, level, category, curr
     return (
       <div className="teamsContainer">
           <div style={{ background: backgroundColor, width: "100vw", height: "100vh", color: "white", alignContent: "center"}}>
-              <b style={{alignItems: "center", color: "white", fontFamily: "monospace", fontSize: "4vw"}}>{currQ}</b>
+              <b style={{alignItems: "center", color: "white", fontFamily: "monospace", fontSize: "4vw"}}>{language === 'English' ? currQ : t(currQ)}</b>
               <div style={{height: "8vh"}}></div>
               <div style={{marginLeft: "8vw"}}>
                   <text style={{background: "#28fc81", marginRight: "6vw", fontSize: "2.8vw"}} className="changeBgClrBlack teamsChoice" 
-                  onClick={() => handleAnswerClick(answers[0])}><b>{answers[0]}</b></text>
+                  onClick={() => handleAnswerClick(answers[0])}><b>{language === 'English' ? answers[0] : t(answers[0])}</b></text>
                   <text style={{background: "#ff6bee", marginRight: "6vw", fontSize: "2.8vw"}} className="changeBgClrBlack teamsChoice" 
-                  onClick={() => handleAnswerClick(answers[1])}><b>{answers[1]}</b></text>
+                  onClick={() => handleAnswerClick(answers[1])}><b>{language === 'English' ? answers[1] : t(answers[1])}</b></text>
               </div>
               <div style={{marginTop: "18vh", marginLeft: "8vw"}}>
                   <text style={{background: "#c66bff", marginRight: "6vw", fontSize: "2.8vw"}} className="changeBgClrBlack teamsChoice" 
-                  onClick={() => handleAnswerClick(answers[2])}><b>{answers[2]}</b></text>
+                  onClick={() => handleAnswerClick(answers[2])}><b>{language === 'English' ? answers[2] : t(answers[2])}</b></text>
                   <text style={{background: "#44d8fc", marginRight: "6vw", fontSize: "2.8vw"}} className="changeBgClrBlack teamsChoice" 
-                  onClick={() => handleAnswerClick(answers[3])}><b>{answers[3]}</b></text>
+                  onClick={() => handleAnswerClick(answers[3])}><b>{language === 'English' ? answers[3] : t(answers[3])}</b></text>
               </div>
               <div style={{marginTop: "10vh", paddingLeft: "10vh", paddingRight: "10vh"}}>
                   <b style={{alignItems: "center", color: "white", fontFamily: "monospace", fontSize: "4vw"}}>Time Left: {timeLeft}</b>
                   <div style={{background: "#44d8fc", fontSize: "3vw", marginTop: "0.5vh"}} onClick={() => { handleSetPage("main"); setCurTeam(1);}} 
-                  className="changeColorWhite"><b>Main Menu</b></div>
+                  className="changeColorWhite"><b>{language === 'English' ? "Main Menu" : t("Main Menu")}</b></div>
               </div>
           </div>
       </div>
