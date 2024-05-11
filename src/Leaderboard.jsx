@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import PopUpErrorNames from './PopUpErrorNames';
 import { useTranslation } from 'react-i18next';
-import Translations from './Translations';
-import i18n from './i18n';
 
 export const Leaderboard = ({setCurrentPage, setPoints, setCurrentTeam, setClickedCategories, setClickedCharacters, backgroundColor, setBackgroundColor, 
     language, backgroundMusic, soloUsers, setSoloUsers}) => {

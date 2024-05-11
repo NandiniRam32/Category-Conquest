@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import TwoOptionSlider from './TwoOptionSlider';
 import { useTranslation } from 'react-i18next';
-import Translations from './Translations';
-import i18n from './i18n';
-import musicSource from './BackgroundMusic.mp3';
 
 export const Settings = ({ setCurrentPage, setCurTeam, backgroundColor, language, setLanguage, backgroundMusic, setBackgroundMusic, audio }) => {
     const handleSetPage = (selectedPage) => {
